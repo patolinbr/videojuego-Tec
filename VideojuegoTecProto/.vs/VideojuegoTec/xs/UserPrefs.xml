@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{9AAEF3C7-CCFF-5DB8-CE63-E9A518173F93}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/GroundTile.cs">
+    <Files>
+      <File FileName="Assets/scripts/playerControll.cs" Line="34" Column="2" />
+      <File FileName="Assets/scripts/obstaculos/Parlax.cs" Line="32" Column="1" />
+      <File FileName="Assets/scripts/GroundTile.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VideojuegoTec" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="scripts" expanded="True">
+                <Node name="GroundTile.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="abd9c485-f071-49ce-8dbe-5923c79e43d8" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
