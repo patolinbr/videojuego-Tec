@@ -16,8 +16,13 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void MenuPausa ()
+    public void menuPrincipal ()
     {
         SceneManager.LoadScene("menu");
+    }
+
+    public void menuRety()
+    {
+        SceneManager.LoadScene("retry");
     }
 }

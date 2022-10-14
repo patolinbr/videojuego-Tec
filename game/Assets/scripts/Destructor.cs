@@ -11,7 +11,7 @@ public class Destructor : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "obstaculoLargo")
+        if (collision.gameObject.tag == "player")
         {
             Destroy(gameObject);
         }

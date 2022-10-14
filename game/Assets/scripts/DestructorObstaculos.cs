@@ -9,9 +9,8 @@ public class DestructorObstaculos : MonoBehaviour
     public Vector3 gameVelocity;
 
 
-
-
-    Rigidbody rb;
+    public Rigidbody rb;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +25,25 @@ public class DestructorObstaculos : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        
+
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Destructor")
         {
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.tag == "jugador")
+        {
+            
+            //SceneManager.LoadScene(sceneBuildIndex: 1);
+
+            FindObjectOfType<GameManager>().gameOver();
+            
+            
+        }
+
+
     }
 
  

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main.unity
     guid: 5e219026c9fdd4b9cafbfb03ec5cab9e
+  - enabled: 1
+    path: Assets/retry.unity
+    guid: c2025f211e95d4855839cc029a21b5cc
   m_configObjects: {}

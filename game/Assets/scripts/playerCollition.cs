@@ -6,7 +6,7 @@ public class playerCollition : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "obstacle")
+        if(collision.gameObject.tag == "obstaculo")
         {
             movement.enabled = false;
         }
