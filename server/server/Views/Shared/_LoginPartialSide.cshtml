@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<bx-side-nav-items>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <bx-side-nav-link href="/Identity/Account/Manage" title="Manage"> Hello @User.Identity?.Name!</bx-side-nav-link>
+        <bx-side-nav-link href="/Identity/Account/Logout" title="Logout">Logout</bx-side-nav-link>
+    }
+    else
+    {
+        <bx-side-nav-link href="/Identity/Account/Register">Registro</bx-side-nav-link>
+        <bx-side-nav-link href="/Identity/Account/Login">Iniciar sesión</bx-side-nav-link>
+    }
+</bx-side-nav-items>

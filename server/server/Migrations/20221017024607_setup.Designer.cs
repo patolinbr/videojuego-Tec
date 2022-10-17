@@ -12,8 +12,8 @@ using server.Data;
 namespace server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221005040005_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20221017024607_setup")]
+    partial class setup
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -227,99 +227,145 @@ namespace server.Migrations
 
             modelBuilder.Entity("server.Models.Answer", b =>
                 {
-                    b.Property<int>("AnswerId")
+                    b.Property<int>("AnswerID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("AnswerId"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("AnswerID"));
 
                     b.Property<bool>("Correct")
                         .HasColumnType("boolean");
 
-                    b.Property<int?>("QuestionId")
+                    b.Property<int>("QuestionID")
                         .HasColumnType("integer");
 
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("AnswerId");
+                    b.HasKey("AnswerID");
 
-                    b.HasIndex("QuestionId");
+                    b.HasIndex("QuestionID");
 
                     b.ToTable("Answers");
                 });
 
             modelBuilder.Entity("server.Models.Course", b =>
                 {
-                    b.Property<int>("CourseId")
+                    b.Property<int>("CourseID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CourseId"));
-
-                    b.Property<string>("AuthorId")
-                        .HasColumnType("text");
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CourseID"));
 
                     b.Property<string>("Description")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("IdentityUserID")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("IdentityUserId")
                         .HasColumnType("text");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("CourseId");
+                    b.HasKey("CourseID");
 
-                    b.HasIndex("AuthorId");
+                    b.HasIndex("IdentityUserId");
 
                     b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("server.Models.CourseSection", b =>
                 {
-                    b.Property<int>("CourseSectionId")
+                    b.Property<int>("CourseSectionID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CourseSectionId"));
-
-                    b.Property<string>("AuthorId")
-                        .HasColumnType("text");
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CourseSectionID"));
 
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int?>("CourseId")
+                    b.Property<int>("CourseID")
                         .HasColumnType("integer");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("IdentityUserId")
+                        .HasColumnType("text");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("CourseSectionId");
+                    b.Property<int>("UserID")
+                        .HasColumnType("integer");
 
-                    b.HasIndex("AuthorId");
+                    b.HasKey("CourseSectionID");
 
-                    b.HasIndex("CourseId");
+                    b.HasIndex("CourseID");
+
+                    b.HasIndex("IdentityUserId");
 
                     b.ToTable("CourseSections");
                 });
 
-            modelBuilder.Entity("server.Models.Question", b =>
+            modelBuilder.Entity("server.Models.CourseSectionScore", b =>
                 {
-                    b.Property<int>("QuestionId")
+                    b.Property<int>("CourseSectionScoreID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("QuestionId"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CourseSectionScoreID"));
 
-                    b.Property<int?>("CourseSectionId")
+                    b.Property<DateTime>("AnswerTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("CourseID")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("CourseSectionID")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("IdentityUserID")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Score")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
+
+                    b.HasKey("CourseSectionScoreID");
+
+                    b.HasIndex("CourseID");
+
+                    b.HasIndex("CourseSectionID");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CourseSectionScores");
+                });
+
+            modelBuilder.Entity("server.Models.Question", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CourseID")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("CourseSectionId")
                         .HasColumnType("integer");
 
                     b.Property<int>("Position")
@@ -329,11 +375,60 @@ namespace server.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("QuestionId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseID");
 
                     b.HasIndex("CourseSectionId");
 
                     b.ToTable("Questions");
+                });
+
+            modelBuilder.Entity("server.Models.QuestionScore", b =>
+                {
+                    b.Property<int>("QuestionScoreID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("QuestionScoreID"));
+
+                    b.Property<DateTime>("AnswerTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("CourseID")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("CourseSectionID")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("CourseSectionScoreID")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("IdentityUserID")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("IdentityUserId")
+                        .HasColumnType("text");
+
+                    b.Property<int>("QuestionID")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Score")
+                        .HasColumnType("integer");
+
+                    b.HasKey("QuestionScoreID");
+
+                    b.HasIndex("CourseID");
+
+                    b.HasIndex("CourseSectionID");
+
+                    b.HasIndex("CourseSectionScoreID");
+
+                    b.HasIndex("IdentityUserId");
+
+                    b.HasIndex("QuestionID");
+
+                    b.ToTable("QuestionScore");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -389,48 +484,137 @@ namespace server.Migrations
 
             modelBuilder.Entity("server.Models.Answer", b =>
                 {
-                    b.HasOne("server.Models.Question", null)
+                    b.HasOne("server.Models.Question", "Question")
                         .WithMany("Answers")
-                        .HasForeignKey("QuestionId");
+                        .HasForeignKey("QuestionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Question");
                 });
 
             modelBuilder.Entity("server.Models.Course", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "Author")
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
                         .WithMany()
-                        .HasForeignKey("AuthorId");
+                        .HasForeignKey("IdentityUserId");
 
-                    b.Navigation("Author");
+                    b.Navigation("IdentityUser");
                 });
 
             modelBuilder.Entity("server.Models.CourseSection", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "Author")
-                        .WithMany()
-                        .HasForeignKey("AuthorId");
-
-                    b.HasOne("server.Models.Course", null)
+                    b.HasOne("server.Models.Course", "Course")
                         .WithMany("Sections")
-                        .HasForeignKey("CourseId");
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Author");
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
+
+                    b.Navigation("Course");
+
+                    b.Navigation("IdentityUser");
+                });
+
+            modelBuilder.Entity("server.Models.CourseSectionScore", b =>
+                {
+                    b.HasOne("server.Models.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.Models.CourseSection", "CourseSection")
+                        .WithMany()
+                        .HasForeignKey("CourseSectionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Course");
+
+                    b.Navigation("CourseSection");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("server.Models.Question", b =>
                 {
-                    b.HasOne("server.Models.CourseSection", null)
+                    b.HasOne("server.Models.Course", "Course")
                         .WithMany("Questions")
-                        .HasForeignKey("CourseSectionId");
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.Models.CourseSection", "CourseSection")
+                        .WithMany("Questions")
+                        .HasForeignKey("CourseSectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("CourseSection");
+                });
+
+            modelBuilder.Entity("server.Models.QuestionScore", b =>
+                {
+                    b.HasOne("server.Models.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.Models.CourseSection", "CourseSection")
+                        .WithMany()
+                        .HasForeignKey("CourseSectionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.Models.CourseSectionScore", null)
+                        .WithMany("QuestionScores")
+                        .HasForeignKey("CourseSectionScoreID");
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
+
+                    b.HasOne("server.Models.Question", "Question")
+                        .WithMany()
+                        .HasForeignKey("QuestionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("CourseSection");
+
+                    b.Navigation("IdentityUser");
+
+                    b.Navigation("Question");
                 });
 
             modelBuilder.Entity("server.Models.Course", b =>
                 {
+                    b.Navigation("Questions");
+
                     b.Navigation("Sections");
                 });
 
             modelBuilder.Entity("server.Models.CourseSection", b =>
                 {
                     b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("server.Models.CourseSectionScore", b =>
+                {
+                    b.Navigation("QuestionScores");
                 });
 
             modelBuilder.Entity("server.Models.Question", b =>

@@ -9,11 +9,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9da35ba1-d2cf-4b06-873b-ea3601d69512" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/Controllers/CoursesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/Views/Courses/Course.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/Models/CourseSectionScore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/Models/QuestionScore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/Views/Shared/_LoginPartialFull.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/Views/Shared/_LoginPartialSide.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Data/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/20221005040005_InitialCreate.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/20221005040005_InitialCreate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Answer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Course.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/CourseSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/CourseSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Question.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml.css" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/Shared/_LoginPartial.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +107,8 @@
       <workItem from="1665619981005" duration="798000" />
       <workItem from="1665771326572" duration="41000" />
       <workItem from="1665773973470" duration="615000" />
+      <workItem from="1665791286550" duration="3472000" />
+      <workItem from="1665967951765" duration="9173000" />
     </task>
     <servers />
   </component>
