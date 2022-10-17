@@ -9,23 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9da35ba1-d2cf-4b06-873b-ea3601d69512" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/Models/CourseSectionScore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/Models/QuestionScore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/Views/Shared/_LoginPartialFull.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/Views/Shared/_LoginPartialSide.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Migrations/20221005040005_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Migrations/20221005040005_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Models/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Answer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Models/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Course.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Models/CourseSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/CourseSection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Models/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Question.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml.css" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Shared/_LoginPartial.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/Shared/_LoginPartialFull.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Shared/_LoginPartial.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +22,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9a3c399b3c474d52bd953838425aca3041c00/75/41e00d98/ValidationSummaryTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/93bf8ca51564b3532dce6442f8ec6d3856e11622b484427b6e965ca60aba4b1/IdentityDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Register.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
