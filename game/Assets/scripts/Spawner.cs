@@ -8,10 +8,11 @@ public class Spawner : MonoBehaviour
     
     public Vector3 positionSpawner = new Vector3(25, 1, 0);
 
-    public float timeToSpawn;
+    
 
     void Start()
     {
+        float timeToSpawn = Random.Range(1.5f, 3.0f);
         InvokeRepeating("GenerateObj", 2, timeToSpawn);    
     }
 

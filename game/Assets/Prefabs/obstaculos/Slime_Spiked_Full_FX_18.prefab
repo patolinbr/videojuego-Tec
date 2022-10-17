@@ -150,5 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollFactor: -1
-  gameVelocity: {x: 13, y: 0, z: 0}
+  gameVelocity: {x: 14, y: 0, z: 0}
   rb: {fileID: 0}
+  deathEffect: {fileID: 0}

@@ -28,7 +28,9 @@ public class playerControll : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = jumpSpeed;
+            
             isGrounded = false;
+            FindObjectOfType<AudioManafer>().Play("salto");
         }
 
         if(isAlive)

@@ -10,6 +10,8 @@ public class DestructorObstaculos : MonoBehaviour
 
 
     public Rigidbody rb;
+
+    public GameObject deathEffect;
     
 
     // Start is called before the first frame update
@@ -35,8 +37,10 @@ public class DestructorObstaculos : MonoBehaviour
 
         if (collision.gameObject.tag == "jugador")
         {
-            
+
             //SceneManager.LoadScene(sceneBuildIndex: 1);
+
+            FindObjectOfType<AudioManafer>().Play("muerte");
 
             FindObjectOfType<GameManager>().gameOver();
             
