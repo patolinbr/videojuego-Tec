@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace server.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class setup : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -161,18 +161,19 @@ namespace server.Migrations
                 name: "Courses",
                 columns: table => new
                 {
-                    CourseId = table.Column<int>(type: "integer", nullable: false)
+                    CourseID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
-                    AuthorId = table.Column<string>(type: "text", nullable: true)
+                    IdentityUserID = table.Column<int>(type: "integer", nullable: false),
+                    IdentityUserId = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Courses", x => x.CourseId);
+                    table.PrimaryKey("PK_Courses", x => x.CourseID);
                     table.ForeignKey(
-                        name: "FK_Courses_AspNetUsers_AuthorId",
-                        column: x => x.AuthorId,
+                        name: "FK_Courses_AspNetUsers_IdentityUserId",
+                        column: x => x.IdentityUserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                 });
@@ -181,73 +182,167 @@ namespace server.Migrations
                 name: "CourseSections",
                 columns: table => new
                 {
-                    CourseSectionId = table.Column<int>(type: "integer", nullable: false)
+                    CourseSectionID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
                     Content = table.Column<string>(type: "text", nullable: false),
-                    AuthorId = table.Column<string>(type: "text", nullable: true),
-                    CourseId = table.Column<int>(type: "integer", nullable: true)
+                    CourseID = table.Column<int>(type: "integer", nullable: false),
+                    UserID = table.Column<int>(type: "integer", nullable: false),
+                    IdentityUserId = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CourseSections", x => x.CourseSectionId);
+                    table.PrimaryKey("PK_CourseSections", x => x.CourseSectionID);
                     table.ForeignKey(
-                        name: "FK_CourseSections_AspNetUsers_AuthorId",
-                        column: x => x.AuthorId,
+                        name: "FK_CourseSections_AspNetUsers_IdentityUserId",
+                        column: x => x.IdentityUserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_CourseSections_Courses_CourseId",
-                        column: x => x.CourseId,
+                        name: "FK_CourseSections_Courses_CourseID",
+                        column: x => x.CourseID,
                         principalTable: "Courses",
-                        principalColumn: "CourseId");
+                        principalColumn: "CourseID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CourseSectionScores",
+                columns: table => new
+                {
+                    CourseSectionScoreID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    AnswerTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    IdentityUserID = table.Column<int>(type: "integer", nullable: false),
+                    UserId = table.Column<string>(type: "text", nullable: true),
+                    CourseSectionID = table.Column<int>(type: "integer", nullable: false),
+                    CourseID = table.Column<int>(type: "integer", nullable: false),
+                    Score = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CourseSectionScores", x => x.CourseSectionScoreID);
+                    table.ForeignKey(
+                        name: "FK_CourseSectionScores_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_CourseSectionScores_CourseSections_CourseSectionID",
+                        column: x => x.CourseSectionID,
+                        principalTable: "CourseSections",
+                        principalColumn: "CourseSectionID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CourseSectionScores_Courses_CourseID",
+                        column: x => x.CourseID,
+                        principalTable: "Courses",
+                        principalColumn: "CourseID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Questions",
                 columns: table => new
                 {
-                    QuestionId = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     QuestionText = table.Column<string>(type: "text", nullable: false),
                     Position = table.Column<int>(type: "integer", nullable: false),
-                    CourseSectionId = table.Column<int>(type: "integer", nullable: true)
+                    CourseSectionId = table.Column<int>(type: "integer", nullable: false),
+                    CourseID = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Questions", x => x.QuestionId);
+                    table.PrimaryKey("PK_Questions", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Questions_CourseSections_CourseSectionId",
                         column: x => x.CourseSectionId,
                         principalTable: "CourseSections",
-                        principalColumn: "CourseSectionId");
+                        principalColumn: "CourseSectionID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Questions_Courses_CourseID",
+                        column: x => x.CourseID,
+                        principalTable: "Courses",
+                        principalColumn: "CourseID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Answers",
                 columns: table => new
                 {
-                    AnswerId = table.Column<int>(type: "integer", nullable: false)
+                    AnswerID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Text = table.Column<string>(type: "text", nullable: false),
                     Correct = table.Column<bool>(type: "boolean", nullable: false),
-                    QuestionId = table.Column<int>(type: "integer", nullable: true)
+                    QuestionID = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Answers", x => x.AnswerId);
+                    table.PrimaryKey("PK_Answers", x => x.AnswerID);
                     table.ForeignKey(
-                        name: "FK_Answers_Questions_QuestionId",
-                        column: x => x.QuestionId,
+                        name: "FK_Answers_Questions_QuestionID",
+                        column: x => x.QuestionID,
                         principalTable: "Questions",
-                        principalColumn: "QuestionId");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "QuestionScore",
+                columns: table => new
+                {
+                    QuestionScoreID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    AnswerTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    IdentityUserID = table.Column<int>(type: "integer", nullable: false),
+                    IdentityUserId = table.Column<string>(type: "text", nullable: true),
+                    QuestionID = table.Column<int>(type: "integer", nullable: false),
+                    CourseSectionID = table.Column<int>(type: "integer", nullable: false),
+                    CourseID = table.Column<int>(type: "integer", nullable: false),
+                    Score = table.Column<int>(type: "integer", nullable: false),
+                    CourseSectionScoreID = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_QuestionScore", x => x.QuestionScoreID);
+                    table.ForeignKey(
+                        name: "FK_QuestionScore_AspNetUsers_IdentityUserId",
+                        column: x => x.IdentityUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_QuestionScore_CourseSectionScores_CourseSectionScoreID",
+                        column: x => x.CourseSectionScoreID,
+                        principalTable: "CourseSectionScores",
+                        principalColumn: "CourseSectionScoreID");
+                    table.ForeignKey(
+                        name: "FK_QuestionScore_CourseSections_CourseSectionID",
+                        column: x => x.CourseSectionID,
+                        principalTable: "CourseSections",
+                        principalColumn: "CourseSectionID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_QuestionScore_Courses_CourseID",
+                        column: x => x.CourseID,
+                        principalTable: "Courses",
+                        principalColumn: "CourseID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_QuestionScore_Questions_QuestionID",
+                        column: x => x.QuestionID,
+                        principalTable: "Questions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Answers_QuestionId",
+                name: "IX_Answers_QuestionID",
                 table: "Answers",
-                column: "QuestionId");
+                column: "QuestionID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -287,24 +382,69 @@ namespace server.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Courses_AuthorId",
+                name: "IX_Courses_IdentityUserId",
                 table: "Courses",
-                column: "AuthorId");
+                column: "IdentityUserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CourseSections_AuthorId",
+                name: "IX_CourseSections_CourseID",
                 table: "CourseSections",
-                column: "AuthorId");
+                column: "CourseID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CourseSections_CourseId",
+                name: "IX_CourseSections_IdentityUserId",
                 table: "CourseSections",
-                column: "CourseId");
+                column: "IdentityUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CourseSectionScores_CourseID",
+                table: "CourseSectionScores",
+                column: "CourseID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CourseSectionScores_CourseSectionID",
+                table: "CourseSectionScores",
+                column: "CourseSectionID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CourseSectionScores_UserId",
+                table: "CourseSectionScores",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Questions_CourseID",
+                table: "Questions",
+                column: "CourseID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Questions_CourseSectionId",
                 table: "Questions",
                 column: "CourseSectionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_QuestionScore_CourseID",
+                table: "QuestionScore",
+                column: "CourseID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_QuestionScore_CourseSectionID",
+                table: "QuestionScore",
+                column: "CourseSectionID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_QuestionScore_CourseSectionScoreID",
+                table: "QuestionScore",
+                column: "CourseSectionScoreID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_QuestionScore_IdentityUserId",
+                table: "QuestionScore",
+                column: "IdentityUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_QuestionScore_QuestionID",
+                table: "QuestionScore",
+                column: "QuestionID");
         }
 
         /// <inheritdoc />
@@ -329,10 +469,16 @@ namespace server.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Questions");
+                name: "QuestionScore");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "CourseSectionScores");
+
+            migrationBuilder.DropTable(
+                name: "Questions");
 
             migrationBuilder.DropTable(
                 name: "CourseSections");
