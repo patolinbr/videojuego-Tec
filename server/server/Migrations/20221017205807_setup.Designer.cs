@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using server.Data;
@@ -11,9 +12,10 @@ using server.Data;
 namespace server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221017205807_setup")]
+    partial class setup
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -233,7 +235,7 @@ namespace server.Migrations
                     b.Property<bool>("Correct")
                         .HasColumnType("boolean");
 
-                    b.Property<int?>("QuestionID")
+                    b.Property<int>("QuestionID")
                         .HasColumnType("integer");
 
                     b.Property<string>("Text")
@@ -260,6 +262,7 @@ namespace server.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("IdentityUserID")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Title")
@@ -285,7 +288,7 @@ namespace server.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int?>("CourseID")
+                    b.Property<int>("CourseID")
                         .HasColumnType("integer");
 
                     b.Property<string>("Description")
@@ -293,6 +296,7 @@ namespace server.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("IdentityUserID")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Title")
@@ -319,13 +323,14 @@ namespace server.Migrations
                     b.Property<DateTime>("AnswerTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int?>("CourseID")
+                    b.Property<int>("CourseID")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("CourseSectionID")
+                    b.Property<int>("CourseSectionID")
                         .HasColumnType("integer");
 
                     b.Property<string>("IdentityUserID")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Score")
@@ -350,10 +355,10 @@ namespace server.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CourseID")
+                    b.Property<int>("CourseID")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("CourseSectionId")
+                    b.Property<int>("CourseSectionId")
                         .HasColumnType("integer");
 
                     b.Property<int>("Position")
@@ -383,19 +388,20 @@ namespace server.Migrations
                     b.Property<DateTime>("AnswerTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int?>("CourseID")
+                    b.Property<int>("CourseID")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("CourseSectionID")
+                    b.Property<int>("CourseSectionID")
                         .HasColumnType("integer");
 
                     b.Property<int?>("CourseSectionScoreID")
                         .HasColumnType("integer");
 
                     b.Property<string>("IdentityUserID")
+                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int?>("QuestionID")
+                    b.Property<int>("QuestionID")
                         .HasColumnType("integer");
 
                     b.Property<int>("Score")
@@ -471,7 +477,9 @@ namespace server.Migrations
                 {
                     b.HasOne("server.Models.Question", "Question")
                         .WithMany("Answers")
-                        .HasForeignKey("QuestionID");
+                        .HasForeignKey("QuestionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Question");
                 });
@@ -480,7 +488,9 @@ namespace server.Migrations
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
                         .WithMany()
-                        .HasForeignKey("IdentityUserID");
+                        .HasForeignKey("IdentityUserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("IdentityUser");
                 });
@@ -489,11 +499,15 @@ namespace server.Migrations
                 {
                     b.HasOne("server.Models.Course", "Course")
                         .WithMany("Sections")
-                        .HasForeignKey("CourseID");
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
                         .WithMany()
-                        .HasForeignKey("IdentityUserID");
+                        .HasForeignKey("IdentityUserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Course");
 
@@ -504,15 +518,21 @@ namespace server.Migrations
                 {
                     b.HasOne("server.Models.Course", "Course")
                         .WithMany()
-                        .HasForeignKey("CourseID");
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("server.Models.CourseSection", "CourseSection")
                         .WithMany()
-                        .HasForeignKey("CourseSectionID");
+                        .HasForeignKey("CourseSectionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
                         .WithMany()
-                        .HasForeignKey("IdentityUserID");
+                        .HasForeignKey("IdentityUserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Course");
 
@@ -525,11 +545,15 @@ namespace server.Migrations
                 {
                     b.HasOne("server.Models.Course", "Course")
                         .WithMany("Questions")
-                        .HasForeignKey("CourseID");
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("server.Models.CourseSection", "CourseSection")
                         .WithMany("Questions")
-                        .HasForeignKey("CourseSectionId");
+                        .HasForeignKey("CourseSectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Course");
 
@@ -540,11 +564,15 @@ namespace server.Migrations
                 {
                     b.HasOne("server.Models.Course", "Course")
                         .WithMany()
-                        .HasForeignKey("CourseID");
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("server.Models.CourseSection", "CourseSection")
                         .WithMany()
-                        .HasForeignKey("CourseSectionID");
+                        .HasForeignKey("CourseSectionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("server.Models.CourseSectionScore", null)
                         .WithMany("QuestionScores")
@@ -552,11 +580,15 @@ namespace server.Migrations
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
                         .WithMany()
-                        .HasForeignKey("IdentityUserID");
+                        .HasForeignKey("IdentityUserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("server.Models.Question", "Question")
                         .WithMany()
-                        .HasForeignKey("QuestionID");
+                        .HasForeignKey("QuestionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Course");
 

@@ -8,6 +8,6 @@ public class Answer
     public string Text { get; set; }
     public bool Correct { get; set; }
 
-    public int QuestionID { get; set; }
-    public virtual Question Question { get; set; }
+    public int? QuestionID { get; set; }
+    public virtual Question? Question { get; set; }
 }

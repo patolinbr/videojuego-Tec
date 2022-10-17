@@ -6,10 +6,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace server.Migrations
 {
-    /// <inheritdoc />
     public partial class setup : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -165,17 +163,17 @@ namespace server.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
-                    IdentityUserID = table.Column<int>(type: "integer", nullable: false),
-                    IdentityUserId = table.Column<string>(type: "text", nullable: true)
+                    IdentityUserID = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Courses", x => x.CourseID);
                     table.ForeignKey(
-                        name: "FK_Courses_AspNetUsers_IdentityUserId",
-                        column: x => x.IdentityUserId,
+                        name: "FK_Courses_AspNetUsers_IdentityUserID",
+                        column: x => x.IdentityUserID,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -188,17 +186,17 @@ namespace server.Migrations
                     Description = table.Column<string>(type: "text", nullable: false),
                     Content = table.Column<string>(type: "text", nullable: false),
                     CourseID = table.Column<int>(type: "integer", nullable: false),
-                    UserID = table.Column<int>(type: "integer", nullable: false),
-                    IdentityUserId = table.Column<string>(type: "text", nullable: true)
+                    IdentityUserID = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CourseSections", x => x.CourseSectionID);
                     table.ForeignKey(
-                        name: "FK_CourseSections_AspNetUsers_IdentityUserId",
-                        column: x => x.IdentityUserId,
+                        name: "FK_CourseSections_AspNetUsers_IdentityUserID",
+                        column: x => x.IdentityUserID,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_CourseSections_Courses_CourseID",
                         column: x => x.CourseID,
@@ -214,8 +212,7 @@ namespace server.Migrations
                     CourseSectionScoreID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     AnswerTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    IdentityUserID = table.Column<int>(type: "integer", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: true),
+                    IdentityUserID = table.Column<string>(type: "text", nullable: false),
                     CourseSectionID = table.Column<int>(type: "integer", nullable: false),
                     CourseID = table.Column<int>(type: "integer", nullable: false),
                     Score = table.Column<int>(type: "integer", nullable: false)
@@ -224,21 +221,22 @@ namespace server.Migrations
                 {
                     table.PrimaryKey("PK_CourseSectionScores", x => x.CourseSectionScoreID);
                     table.ForeignKey(
-                        name: "FK_CourseSectionScores_AspNetUsers_UserId",
-                        column: x => x.UserId,
+                        name: "FK_CourseSectionScores_AspNetUsers_IdentityUserID",
+                        column: x => x.IdentityUserID,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_CourseSectionScores_CourseSections_CourseSectionID",
-                        column: x => x.CourseSectionID,
-                        principalTable: "CourseSections",
-                        principalColumn: "CourseSectionID",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_CourseSectionScores_Courses_CourseID",
                         column: x => x.CourseID,
                         principalTable: "Courses",
                         principalColumn: "CourseID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CourseSectionScores_CourseSections_CourseSectionID",
+                        column: x => x.CourseSectionID,
+                        principalTable: "CourseSections",
+                        principalColumn: "CourseSectionID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -257,16 +255,16 @@ namespace server.Migrations
                 {
                     table.PrimaryKey("PK_Questions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Questions_CourseSections_CourseSectionId",
-                        column: x => x.CourseSectionId,
-                        principalTable: "CourseSections",
-                        principalColumn: "CourseSectionID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_Questions_Courses_CourseID",
                         column: x => x.CourseID,
                         principalTable: "Courses",
                         principalColumn: "CourseID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Questions_CourseSections_CourseSectionId",
+                        column: x => x.CourseSectionId,
+                        principalTable: "CourseSections",
+                        principalColumn: "CourseSectionID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -298,8 +296,7 @@ namespace server.Migrations
                     QuestionScoreID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     AnswerTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    IdentityUserID = table.Column<int>(type: "integer", nullable: false),
-                    IdentityUserId = table.Column<string>(type: "text", nullable: true),
+                    IdentityUserID = table.Column<string>(type: "text", nullable: false),
                     QuestionID = table.Column<int>(type: "integer", nullable: false),
                     CourseSectionID = table.Column<int>(type: "integer", nullable: false),
                     CourseID = table.Column<int>(type: "integer", nullable: false),
@@ -310,20 +307,10 @@ namespace server.Migrations
                 {
                     table.PrimaryKey("PK_QuestionScore", x => x.QuestionScoreID);
                     table.ForeignKey(
-                        name: "FK_QuestionScore_AspNetUsers_IdentityUserId",
-                        column: x => x.IdentityUserId,
+                        name: "FK_QuestionScore_AspNetUsers_IdentityUserID",
+                        column: x => x.IdentityUserID,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_QuestionScore_CourseSectionScores_CourseSectionScoreID",
-                        column: x => x.CourseSectionScoreID,
-                        principalTable: "CourseSectionScores",
-                        principalColumn: "CourseSectionScoreID");
-                    table.ForeignKey(
-                        name: "FK_QuestionScore_CourseSections_CourseSectionID",
-                        column: x => x.CourseSectionID,
-                        principalTable: "CourseSections",
-                        principalColumn: "CourseSectionID",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_QuestionScore_Courses_CourseID",
@@ -331,6 +318,17 @@ namespace server.Migrations
                         principalTable: "Courses",
                         principalColumn: "CourseID",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_QuestionScore_CourseSections_CourseSectionID",
+                        column: x => x.CourseSectionID,
+                        principalTable: "CourseSections",
+                        principalColumn: "CourseSectionID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_QuestionScore_CourseSectionScores_CourseSectionScoreID",
+                        column: x => x.CourseSectionScoreID,
+                        principalTable: "CourseSectionScores",
+                        principalColumn: "CourseSectionScoreID");
                     table.ForeignKey(
                         name: "FK_QuestionScore_Questions_QuestionID",
                         column: x => x.QuestionID,
@@ -382,9 +380,9 @@ namespace server.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Courses_IdentityUserId",
+                name: "IX_Courses_IdentityUserID",
                 table: "Courses",
-                column: "IdentityUserId");
+                column: "IdentityUserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CourseSections_CourseID",
@@ -392,9 +390,9 @@ namespace server.Migrations
                 column: "CourseID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CourseSections_IdentityUserId",
+                name: "IX_CourseSections_IdentityUserID",
                 table: "CourseSections",
-                column: "IdentityUserId");
+                column: "IdentityUserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CourseSectionScores_CourseID",
@@ -407,9 +405,9 @@ namespace server.Migrations
                 column: "CourseSectionID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CourseSectionScores_UserId",
+                name: "IX_CourseSectionScores_IdentityUserID",
                 table: "CourseSectionScores",
-                column: "UserId");
+                column: "IdentityUserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Questions_CourseID",
@@ -437,9 +435,9 @@ namespace server.Migrations
                 column: "CourseSectionScoreID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_QuestionScore_IdentityUserId",
+                name: "IX_QuestionScore_IdentityUserID",
                 table: "QuestionScore",
-                column: "IdentityUserId");
+                column: "IdentityUserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_QuestionScore_QuestionID",
@@ -447,7 +445,6 @@ namespace server.Migrations
                 column: "QuestionID");
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
