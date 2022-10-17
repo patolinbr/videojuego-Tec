@@ -1,45 +1,54 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet"
-          href="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/canary/plex.css"/>
-    <link rel="stylesheet"
-          href="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/canary/grid.css"/>
-    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/tag/latest/ui-shell.min.js"></script>
+
+    @RenderSection("Header", required: false)
 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - server</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/IBM-type/0.5.4/css/ibm-type.min.css"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/server.styles.css"/>
+    <link rel="stylesheet" href="~/css/site.css"/>
     <style>
-        bx-header {
-           --cds-background: red;
-        }
-        bx-header ~ bx-side-nav {
-    margin-top: 3rem;
-    height: calc(100% - 3rem);
-}
+        /*bx-header {*/
+        /*   --cds-background: red;*/
+        /*}*/
+        /*bx-header ~ bx-side-nav {*/
+        /*    margin-top: 3rem;*/
+        /*    height: calc(100% - 3rem);*/
+        /*}*/
     </style>
 </head>
 <body>
-<bx-header>
-    <bx-header-menu-button></bx-header-menu-button>
-    <bx-header-name href="/" prefix="IEPAM">Knowledge to Go</bx-header-name>
-    <bx-header-nav>
-        <partial name="_LoginPartialFull"/>
-    </bx-header-nav>
-</bx-header>
-<bx-side-nav usage-mode="header-nav">
-    <partial name="_LoginPartialSide"/>
-</bx-side-nav >
-<div class="bx--grid">
-    <div class="bx--row">
-        <div class="bx--col-sm-4 bx--col-lg-12" style="margin: 4rem 0;">
-            @RenderBody()
-
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="font-weight: bold">IEPAM</a>
+        <a class="navbar-brand" href="/">Knowledge to Go</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            <partial name="_LoginPartial"/>
         </div>
     </div>
+</nav>
+<div class="body">
+
+    @RenderBody()
 </div>
 
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 @RenderSection("Scripts", required: false)
 </body>
 
