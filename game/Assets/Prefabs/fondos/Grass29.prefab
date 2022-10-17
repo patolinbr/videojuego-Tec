@@ -99,7 +99,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Center: {x: 0, y: -1, z: 1}
 --- !u!54 &4466350777809138106
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -130,3 +130,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollFactor: -0.5
   gameVelocity: {x: 12, y: 0, z: 0}
+  rb: {fileID: 0}
