@@ -458,15 +458,6 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "CanvasGroup",
-            "fullManagedTypeName": "UnityEngine.CanvasGroup",
-            "moduleName": "UI",
-            "usedInScenes": [
-                "Assets/menu.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "CanvasRenderer",
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",

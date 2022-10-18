@@ -25,8 +25,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -79,9 +81,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
-  - assembly: Assembly-CSharp
-    fullTypeName: hyperlink
-    methodName: openChanel
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -90,19 +89,13 @@ ScriptsOnlyBuild:
     methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
-    methodName: SetVolume
+    methodName: QuitGame
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
     methodName: PlayGame
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
-    methodName: QuitGame
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
+    methodName: SetVolume
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: loadMenu
@@ -292,8 +285,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6158}
     - Class: 114
       Script: {instanceID: 6516}
-    - Class: 114
-      Script: {instanceID: 6752}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -311,8 +302,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 225
       Script: {instanceID: 0}
     - Class: 241
       Script: {instanceID: 0}
