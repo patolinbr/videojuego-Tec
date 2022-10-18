@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - MainMenu
     - Parallax2
     - PauseMenu
+    - Question
     - Spawner
     - animationState
     - hyperlink
@@ -25,8 +26,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -79,9 +82,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
-  - assembly: Assembly-CSharp
-    fullTypeName: hyperlink
-    methodName: openChanel
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -90,19 +90,13 @@ ScriptsOnlyBuild:
     methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
-    methodName: SetVolume
+    methodName: QuitGame
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
     methodName: PlayGame
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
-    methodName: QuitGame
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
+    methodName: SetVolume
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: loadMenu
@@ -203,6 +197,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6878}
     - Class: 114
       Script: {instanceID: 7196}
+    - Class: 114
+      Script: {instanceID: 45084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -292,8 +288,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6158}
     - Class: 114
       Script: {instanceID: 6516}
-    - Class: 114
-      Script: {instanceID: 6752}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -311,8 +305,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 225
       Script: {instanceID: 0}
     - Class: 241
       Script: {instanceID: 0}
@@ -1224,7 +1216,7 @@ ScriptsOnlyBuild:
     className: UnityOnDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: d55baa5a374c97d51f4d42dfc45b16ea
+      Hash: d0c33f623c3238404ccdfe21d7f26c99
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: playerControll
@@ -1474,6 +1466,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4be381e1b75002b9289527b5f1d7a44d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Question
+  - hash:
+      serializedVersion: 2
+      Hash: 3e9f6eb013e1f31499a57c0b153d8382
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Answer
   platform: 20
   scenePathNames:
   - Assets/menu.unity

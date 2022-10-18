@@ -27859,11 +27859,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Mathf_Abs_m4778EE107161FAC49E51E7BEF3F4
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		float L_1;
 		L_1 = fabsf(L_0);
-		V_0 = ((float)L_1);
-		goto IL_000b;
+		V_0 = L_1;
+		goto IL_000a;
 	}
 
-IL_000b:
+IL_000a:
 	{
 		float L_2 = V_0;
 		return L_2;

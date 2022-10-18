@@ -6,22 +6,20 @@
 
 <style>
     h1 { color: #FFFFFF; margin-left:32px; margin-top:168px}
-    create {margin-left:32px}
-    card {margin-left:32px}
+    .create {margin-left:32px}
 </style>
-<div class= "col-md-12 body">
-    <br />
+<div class="col-md-12 body">
+    <br/>
     <h1>Questions</h1>
 </div>
-    <div>
-        <br />
-    <create>
-        <a asp-action="Create">Create New</a>
-    </create>
-    <br />
-    <card class="col-md-8 card" style="background:#F4F4F4;">
-<table class="table">
-    <thead>
+<br/>
+<div class="create">
+    <a asp-action="Create">Create New</a>
+</div>
+<br/>
+<div class="col-md-8 card" style="background:#F4F4F4; margin-left: 32px;">
+    <table class="table">
+        <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.QuestionText)
@@ -37,29 +35,30 @@
             </th>
             <th></th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuestionText)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Position)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CourseSection.CourseSectionID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Course.CourseID)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
-</card>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuestionText)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Position)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseSection.CourseSectionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.CourseID)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

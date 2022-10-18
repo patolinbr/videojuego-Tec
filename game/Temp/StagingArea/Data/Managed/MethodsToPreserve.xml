@@ -2,7 +2,6 @@
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
 		<type fullname="hyperlink">
 			<method name="openChanel"/>
-			<method name="openChanel"/>
 		</type>
 		<type fullname="MainMenu">
 			<method name="menuPrincipal"/>
@@ -19,8 +18,6 @@
 	</assembly>
 	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.GameObject">
-			<method name="SetActive"/>
-			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>
 		</type>

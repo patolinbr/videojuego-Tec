@@ -13,6 +13,8 @@ public class playerControll : MonoBehaviour
     float score;
     public Text ScoreText;
     public GameObject obstacle;
+    public GameObject questionBoard;
+    private int activations = 0;
 
     // Start is called before the first frame update
     void Awake()
@@ -25,6 +27,13 @@ public class playerControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (score != 0 && score - (activations * 20) > 20)
+        {
+            Debug.Log("Starting question");
+            activations++;
+            questionBoard.SetActive(true);
+            Time.timeScale = 0f;
+        }
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = jumpSpeed;
