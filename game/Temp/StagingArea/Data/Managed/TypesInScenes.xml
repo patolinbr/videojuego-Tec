@@ -10,6 +10,7 @@
 		<type fullname="Parallax2" preserve="nothing"/>
 		<type fullname="PauseMenu" preserve="nothing"/>
 		<type fullname="playerControll" preserve="nothing"/>
+		<type fullname="Question" preserve="nothing"/>
 		<type fullname="Spawner" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">

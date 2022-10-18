@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - MainMenu
     - Parallax2
     - PauseMenu
+    - Question
     - Spawner
     - animationState
     - hyperlink
@@ -196,6 +197,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6878}
     - Class: 114
       Script: {instanceID: 7196}
+    - Class: 114
+      Script: {instanceID: 45084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1213,7 +1216,7 @@ ScriptsOnlyBuild:
     className: UnityOnDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: d55baa5a374c97d51f4d42dfc45b16ea
+      Hash: d0c33f623c3238404ccdfe21d7f26c99
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: playerControll
@@ -1463,6 +1466,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4be381e1b75002b9289527b5f1d7a44d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Question
+  - hash:
+      serializedVersion: 2
+      Hash: 3e9f6eb013e1f31499a57c0b153d8382
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Answer
   platform: 20
   scenePathNames:
   - Assets/menu.unity
