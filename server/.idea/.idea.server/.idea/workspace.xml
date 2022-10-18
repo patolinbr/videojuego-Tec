@@ -10,11 +10,19 @@
   <component name="ChangeListManager">
     <list default="true" id="9da35ba1-d2cf-4b06-873b-ea3601d69512" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Login.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml.css" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Shared/_Layout.cshtml.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Shared/_LoginPartialFull.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Shared/_LoginPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Controllers/CoursesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/20221017024607_setup.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/20221017024607_setup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Answer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Course.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/CourseSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/CourseSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/CourseSectionScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/CourseSectionScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Question.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/QuestionScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/QuestionScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/Courses/Course.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +30,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31aad266a1a74c628dadf16da2c67c2e2fa00/09/a2ca0b56/ModelStateDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69d67832d3c14dc188bceb308b04e5d312c00/81/cf198d88/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9a3c399b3c474d52bd953838425aca3041c00/75/41e00d98/ValidationSummaryTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edc9d24212cf42ada73c39d1280a58bb1cc600/b7/f966ddd8/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/93bf8ca51564b3532dce6442f8ec6d3856e11622b484427b6e965ca60aba4b1/IdentityDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Register.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
@@ -105,6 +116,7 @@
       <workItem from="1665773973470" duration="615000" />
       <workItem from="1665791286550" duration="3472000" />
       <workItem from="1665967951765" duration="9173000" />
+      <workItem from="1666039290191" duration="7735000" />
     </task>
     <servers />
   </component>
