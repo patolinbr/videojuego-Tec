@@ -12,9 +12,13 @@
     <link rel="stylesheet" href="~/server.styles.css"/>
     <link rel="stylesheet" href="~/css/site.css"/>
     <style>
-        :root{
-            --main-bg-color: red;
-        }
+        /*bx-header {*/
+        /*   --cds-background: red;*/
+        /*}*/
+        /*bx-header ~ bx-side-nav {*/
+        /*    margin-top: 3rem;*/
+        /*    height: calc(100% - 3rem);*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -38,7 +42,10 @@
         </div>
     </div>
 </nav>
+<div class="body">
+
     @RenderBody()
+</div>
 
 
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
