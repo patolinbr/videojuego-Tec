@@ -6,22 +6,28 @@
 
 <style>
     h1 { color: #FFFFFF; margin-left:32px; margin-top:168px}
-    create {margin-left:32px}
-    card {margin-left:32px}
 </style>
-<div class= "col-md-12 body">
-    <br />
-    <h1>CourseSections</h1>
+<div class="col-md-12 body">
+    <br/>
+    <h1>Cursos</h1>
 </div>
-    <div>
-        <br />
-    <create>
-        <a asp-action="Create">Create New</a>
-    </create>
-    <br />
-    <card class="col-md-8 card" style="background:#F4F4F4;">
+<br/>
+<create>
+    <a asp-action="Create">Create New</a>
+</create>
+<br/>
+@foreach (var course in Model)
+{
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">@Html.DisplayFor(modelItem => course.Title)</h5>
+            <p class="card-text">@Html.DisplayFor(modelItem => course.Description)</p>
+        </div>
+    </div>
+}
+<card class="col-md-8 card" style="background:#F4F4F4;">
     <table class="table">
-    <thead>
+        <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Title)
@@ -40,32 +46,33 @@
             </th>
             <th></th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Content)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Course.CourseID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdentityUser.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CourseSectionID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CourseSectionID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CourseSectionID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.CourseID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdentityUser.Id)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CourseSectionID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.CourseSectionID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CourseSectionID">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
     </table>
-    </card>
+</card>

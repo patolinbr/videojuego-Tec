@@ -3,43 +3,28 @@
 @{
     ViewData["Title"] = "Details";
 }
-<style>
-    h1 {color: #FFFFFF; margin-left:32px; margin-top:138px}
-    h4 {color: #FFFFFF; margin-left:32px;}
-    buttons {margin-left:32px}
-    card {margin-left:32px}
-</style>
-    <div class="col-md-12 body">
-        <br />
-        <h1>@ViewData["Title"]</h1>
-        <h4>Course</h4>
+<div class="container-fluid body align-items-end mb-2" style="display: flex">
+    <div class="row">
+        <div class="col">
+
+            <h1 class="display-3" style="color: white">@Model.Title</h1>
+        </div>
+
     </div>
-<div>
-    <hr />
-    <card class = "col-md-8 card" style="background:#F4F4F4;">
-    <dl class="row">
-        <dt class = "col-sm-2"style="margin-left:32px;">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-8">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2"style="margin-left:32px;">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-8">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2"style="margin-left:32px;">
-            @Html.DisplayNameFor(model => model.IdentityUserID)
-        </dt>
-        <dd class = "col-sm-8">
-            @Html.DisplayFor(model => model.IdentityUserID)
-        </dd>
-    </dl>
-    </card>
 </div>
-<buttons>
-    <a asp-action="Edit" asp-route-id="@Model?.CourseID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</buttons>
+<div class="container-fluid">
+    <p class="p">
+        @Html.DisplayFor((model => model.Description))
+    </p>
+    @if (Model.Sections != null)
+    {
+        foreach (var courseSection in Model.Sections)
+        {
+            <h4>@courseSection.Title</h4>
+            <p>@courseSection.Description</p>
+        }
+    }
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.CourseID" asp-all-route-data="">Edit</a>
+    <a class="btn btn-primary" asp-action="Index">Back to List</a>
+
+</div>

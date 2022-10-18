@@ -9,56 +9,56 @@
     back {margin-left:32px}
     card {margin-left:32px}
 </style>
-    <div class="col-md-12 body">
-        <br />
-        <h1>@ViewData["Title"]</h1>
-        <h4>QuestionScore</h4>
-    </div>
-<hr />
-<card class = "col-md-8 card" style="background:#F4F4F4;">
-<div class="row" align="left">
-    <div class="col-md-11" style= "margin-left:32px">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="QuestionScoreID" />
-            <div class="form-group">
-                <label asp-for="AnswerTime" class="control-label"></label>
-                <input asp-for="AnswerTime" class="form-control" />
-                <span asp-validation-for="AnswerTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdentityUserID" class="control-label"></label>
-                <select asp-for="IdentityUserID" class="form-control" asp-items="ViewBag.IdentityUserID"></select>
-                <span asp-validation-for="IdentityUserID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="QuestionID" class="control-label"></label>
-                <select asp-for="QuestionID" class="form-control" asp-items="ViewBag.QuestionID"></select>
-                <span asp-validation-for="QuestionID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CourseSectionID" class="control-label"></label>
-                <select asp-for="CourseSectionID" class="form-control" asp-items="ViewBag.CourseSectionID"></select>
-                <span asp-validation-for="CourseSectionID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CourseID" class="control-label"></label>
-                <select asp-for="CourseID" class="form-control" asp-items="ViewBag.CourseID"></select>
-                <span asp-validation-for="CourseID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Score" class="control-label"></label>
-                <input asp-for="Score" class="form-control" />
-                <span asp-validation-for="Score" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+<div class="col-md-12 body">
+    <br/>
+    <h1>@ViewData["Title"]</h1>
+    <h4>QuestionScore</h4>
 </div>
+<hr/>
+<div class="col-md-8 card" style="background:#F4F4F4;">
+    <div class="row" align="left">
+        <div class="col-md-11" style="margin-left:32px">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="QuestionScoreID"/>
+                <div class="form-group">
+                    <label asp-for="AnswerTime" class="control-label"></label>
+                    <input asp-for="AnswerTime" class="form-control"/>
+                    <span asp-validation-for="AnswerTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IdentityUserID" class="control-label"></label>
+                    <select asp-for="IdentityUserID" class="form-control" asp-items="ViewBag.IdentityUserID"></select>
+                    <span asp-validation-for="IdentityUserID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="QuestionID" class="control-label"></label>
+                    <select asp-for="QuestionID" class="form-control" asp-items="ViewBag.QuestionID"></select>
+                    <span asp-validation-for="QuestionID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CourseSectionID" class="control-label"></label>
+                    <select asp-for="CourseSectionID" class="form-control" asp-items="ViewBag.CourseSectionID"></select>
+                    <span asp-validation-for="CourseSectionID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CourseID" class="control-label"></label>
+                    <select asp-for="CourseID" class="form-control" asp-items="ViewBag.CourseID"></select>
+                    <span asp-validation-for="CourseID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Score" class="control-label"></label>
+                    <input asp-for="Score" class="form-control"/>
+                    <span asp-validation-for="Score" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary"/>
+                </div>
+            </form>
+        </div>
+    </div>
 
+</div>
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
