@@ -4,13 +4,22 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Answer</h4>
+<style>
+    h1 {color: #FFFFFF; margin-left:32px; margin-top:128px}
+    h3 {color: #FFFFFF; margin-left:32px;}
+    back {margin-left:32px}
+    card {margin-left:32px}
+</style>
+    <div class="col-md-12 body">
+        <br />
+        <h1>@ViewData["Title"]</h1>
+        <h3>Are you sure you want to delete this?</h3>
+    </div>
     <hr />
-    <dl class="row">
+   <card class = "col-md-8 card" style="background:#F4F4F4;">
+    <br />
+    <dl class="row" align="left">
+        <div class="col-md-11" style= "margin-left:32px">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Text)
         </dt>
@@ -30,10 +39,12 @@
             @Html.DisplayFor(model => model.Question.Id)
         </dd>
     </dl>
-    
-    <form asp-action="Delete">
+    <form asp-action="Delete" align="right">
         <input type="hidden" asp-for="AnswerID" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-danger" style="background:#643385; margin-right:32px;"/> |
     </form>
+    </card>
+<back>
+    <a asp-action="Index">Back to List</a>
+</back>
 </div>

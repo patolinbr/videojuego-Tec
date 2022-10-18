@@ -3,13 +3,22 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
-<h1>Edit</h1>
-
-<h4>Answer</h4>
+<style>
+    h1 {color: #FFFFFF; margin-left:32px; margin-top:138px}
+    h4 {color: #FFFFFF; margin-left:32px;}
+    back {margin-left:32px}
+    card {margin-left:32px}
+</style>
+    <div class="col-md-12 body">
+        <br />
+        <h1>@ViewData["Title"]</h1>
+        <h4>Answer</h4>
+    </div>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<card class = "col-md-8 card" style="background:#F4F4F4;">
+    <br />
+<div class="row" align="left">
+    <div class="col-md-11" style= "margin-left:32px">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="AnswerID" />
@@ -28,13 +37,14 @@
                 <select asp-for="QuestionID" class="form-control" asp-items="ViewBag.QuestionID"></select>
                 <span asp-validation-for="QuestionID" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <br />
+            <div class="form-group" align="right">
+                <input type="submit" value="Save" class="btn btn-primary" style="background:#643385;"/>
             </div>
         </form>
     </div>
 </div>
-
+</card>
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
