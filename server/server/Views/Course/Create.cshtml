@@ -3,32 +3,45 @@
 @{
     ViewData["Title"] = "Create";
 }
-
-<h1>Create</h1>
-
-<h4>Course</h4>
-<hr/>
-<div class="row">
-    <div class="col-md-4">
+<style>
+    h1 {color: #FFFFFF; margin-left:32px; margin-top:138px}
+    h4 {color: #FFFFFF; margin-left:32px;}
+    back {margin-left:32px}
+    card {margin-left:32px}
+</style>
+    <div class="col-md-12 body">
+        <br />
+        <h1>@ViewData["Title"]</h1>
+        <h4>Course</h4>
+    </div>
+    <br />
+<card class = "col-md-8 card" style="background:#F4F4F4;">
+<div class="row" align="left">
+    <div class="col-md-11" style= "margin-left:32px">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <br />
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control"/>
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control"/>
+                <textarea asp-for="Description" class="form-control" rows="4"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary"/>
+            <br />
+            <div class="form-group" align= "right">
+                <input type="submit" value="Create" class="btn btn-primary" style="background:#643385;"/>
             </div>
+            <br />
         </form>
     </div>
 </div>
+</card>
 
-<div>
+<back>
     <a asp-action="Index">Back to List</a>
-</div>
+</back>

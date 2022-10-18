@@ -4,15 +4,23 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<a href="Home/Home.html">Inicio</a>
-
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<style>
+    h1 { color: #FFFFFF; margin-left:32px; margin-top:168px}
+    create {margin-left:32px}
+    card {margin-left:32px}
+</style>
+<div class= "col-md-12 body">
+    <br />
+    <h1>CourseSections</h1>
+</div>
+    <div>
+        <br />
+    <create>
+        <a asp-action="Create">Create New</a>
+    </create>
+    <br />
+    <card class="col-md-8 card" style="background:#F4F4F4;">
+    <table class="table">
     <thead>
         <tr>
             <th>
@@ -59,4 +67,5 @@
         </tr>
 }
     </tbody>
-</table>
+    </table>
+    </card>

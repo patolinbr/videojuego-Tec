@@ -3,40 +3,50 @@
 @{
     ViewData["Title"] = "Details";
 }
-
-<h1>Details</h1>
-
+<style>
+    h1 {color: #FFFFFF; margin-left:32px; margin-top:138px}
+    h4 {color: #FFFFFF; margin-left:32px;}
+    buttons {margin-left:32px}
+    card {margin-left:32px}
+</style>
+    <div class="col-md-12 body">
+        <br />
+        <h1>@ViewData["Title"]</h1>
+        <h4>Question</h4>
+    </div>
 <div>
-    <h4>Question</h4>
     <hr />
+    <card class = "col-md-8 card" style="background:#F4F4F4;">
+        <br />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-2" style="margin-left:32px;">
             @Html.DisplayNameFor(model => model.QuestionText)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-8">
             @Html.DisplayFor(model => model.QuestionText)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-2" style="margin-left:32px;">
             @Html.DisplayNameFor(model => model.Position)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-8">
             @Html.DisplayFor(model => model.Position)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-2"style="margin-left:32px;">
             @Html.DisplayNameFor(model => model.CourseSection)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-8">
             @Html.DisplayFor(model => model.CourseSection.CourseSectionID)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-2"style="margin-left:32px;">
             @Html.DisplayNameFor(model => model.Course)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-8">
             @Html.DisplayFor(model => model.Course.CourseID)
         </dd>
     </dl>
+    </card>
 </div>
-<div>
+<buttons>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
-</div>
+</buttons>

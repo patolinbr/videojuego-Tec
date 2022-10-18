@@ -4,12 +4,22 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Question</h4>
+<style>
+    h1 {color: #FFFFFF; margin-left:32px; margin-top:138px}
+    h4 {color: #FFFFFF; margin-left:32px;}
+    back {margin-left:32px}
+    card {margin-left:32px}
+</style>
+    <div class="col-md-12 body">
+        <br />
+        <h1>@ViewData["Title"]</h1>
+        <h4>Course</h4>
+    </div>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<card class = "col-md-8 card" style="background:#F4F4F4;">
+    <br />
+<div class="row" align="left">
+    <div class="col-md-11" style= "margin-left:32px">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
@@ -18,29 +28,34 @@
                 <input asp-for="QuestionText" class="form-control" />
                 <span asp-validation-for="QuestionText" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Position" class="control-label"></label>
                 <input asp-for="Position" class="form-control" />
                 <span asp-validation-for="Position" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="CourseSectionId" class="control-label"></label>
                 <select asp-for="CourseSectionId" class="form-control" asp-items="ViewBag.CourseSectionId"></select>
                 <span asp-validation-for="CourseSectionId" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="CourseID" class="control-label"></label>
                 <select asp-for="CourseID" class="form-control" asp-items="ViewBag.CourseID"></select>
                 <span asp-validation-for="CourseID" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <br />
+            <div class="form-group" align="right">
+                <input type="submit" value="Save" class="btn btn-primary" style="background:#643385;"/>
             </div>
+            <br />
         </form>
     </div>
 </div>
-
-<div>
+</card>
+<back>
     <a asp-action="Index">Back to List</a>
-</div>
+</back>
 
