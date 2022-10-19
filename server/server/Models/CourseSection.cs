@@ -15,6 +15,6 @@ public class CourseSection
 
     public string? IdentityUserID { get; set; }
     public virtual IdentityUser? IdentityUser { get; set; }
-    
-    public virtual ICollection<Question>? Questions { get; set; }
+
+    public virtual ICollection<Question>? Questions { get; set; } = new List<Question>();
 }

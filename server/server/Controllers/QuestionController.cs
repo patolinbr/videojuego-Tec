@@ -67,10 +67,16 @@ namespace server.Controllers
         {
             if (ModelState.IsValid)
             {
-                question.CourseID = _context.CourseSections.Find(question.CourseSectionId).CourseID;
-                _context.Add(question);
+                var courseSection = await _context.CourseSections.FindAsync(question.CourseSectionId);
+                var course = await _context.Courses.FindAsync(courseSection.CourseID);
+                question.CourseID = course.CourseID;
+
+                courseSection.Questions.Add(question);
+                _context.Update(courseSection);
+
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                return RedirectToAction("Details", "CourseSection", new { id = question.CourseSectionId });
             }
 
             ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "CourseID", question.CourseID);
@@ -105,7 +111,8 @@ namespace server.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id,
-            [Bind("Id,QuestionText,Position,CourseSectionId,CourseID")] Question question)
+            [Bind("Id,QuestionText,Position,CourseSectionId,CourseID")]
+            Question question)
         {
             if (id != question.Id)
             {

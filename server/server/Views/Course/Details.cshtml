@@ -3,28 +3,60 @@
 @{
     ViewData["Title"] = "Details";
 }
-<div class="container-fluid body align-items-end mb-2" style="display: flex">
-    <div class="row">
-        <div class="col">
-
-            <h1 class="display-3" style="color: white">@Model.Title</h1>
+<div class="header-background">
+    <div class="container-md align-items-end mb-2 h-100 d-flex">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-3" style="color: white">@Model.Title</h1>
+            </div>
         </div>
+        <div class="row">
 
+        </div>
     </div>
 </div>
-<div class="container-fluid">
-    <p class="p">
-        @Html.DisplayFor((model => model.Description))
-    </p>
-    @if (Model.Sections != null)
-    {
-        foreach (var courseSection in Model.Sections)
+<div class="container-md pt-2">
+    <div class="row">
+        <div class="col">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a asp-action="Index">Cursos</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        @Model.Title
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="p">
+                @Html.DisplayFor((model => model.Description))
+            </p>
+            <br/>
+            @foreach (var courseSection in Model.Sections)
+            {
+                <h4 class="h4">
+                    <a asp-controller="CourseSection" asp-action="Details" asp-route-id="@courseSection.CourseSectionID">@courseSection.Title &#x3e</a>
+                </h4>
+                <p>@courseSection.Description</p>
+                <br/>
+            }
+        </div>
+    </div>
+
+
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.CourseID">Editar</a>
+
+    @{
+        var queryParams = new Dictionary<string, string>
         {
-            <h4>@courseSection.Title</h4>
-            <p>@courseSection.Description</p>
-        }
+            { "CourseId", Model.CourseID.ToString() }
+        };
     }
-    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.CourseID" asp-all-route-data="">Edit</a>
-    <a class="btn btn-primary" asp-action="Index">Back to List</a>
+
+    <a class="btn btn-primary" asp-controller="CourseSection" asp-action="Create" asp-all-route-data="queryParams">Agregar seccion</a>
 
 </div>

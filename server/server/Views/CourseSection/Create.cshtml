@@ -41,7 +41,7 @@
             </div>
             <br />
             <input type="hidden" asp-for="CourseID" value="@ViewData["courseID"]"/>
-            <div class="form-group" align="right">
+            <div class="form-group" >
                 <input type="submit" value="Create" class="btn btn-primary" style="background:#643385;"/>
             </div>
             <br />
@@ -50,5 +50,5 @@
 </div>
 </card>
 <back>
-    <a asp-action="Index">Back to List</a>
+    <a asp-controller="Course" asp-action="Details" asp-route-id="@ViewData["courseID"]">Back to Course</a>
 </back>

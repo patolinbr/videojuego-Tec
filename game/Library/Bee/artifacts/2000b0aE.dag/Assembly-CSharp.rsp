@@ -381,7 +381,7 @@
 "Assets/scripts/Paralax.cs"
 "Assets/scripts/Parallax2.cs"
 "Assets/scripts/ParallaxManager.cs"
-"Assets/scripts/Question.cs"
+"Assets/scripts/QuestionManager.cs"
 "Assets/scripts/Sonido.cs"
 "Assets/scripts/Spawner.cs"
 "Assets/scripts/animationState.cs"

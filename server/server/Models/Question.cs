@@ -13,6 +13,6 @@ public class Question
     
     public int? CourseID { get; set; }
     public virtual Course? Course { get; set; }
-    
-    public virtual ICollection<Answer>? Answers { get; set; }
+
+    public virtual ICollection<Answer>? Answers { get; set; } = new List<Answer>();
 }

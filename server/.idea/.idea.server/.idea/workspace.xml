@@ -9,7 +9,383 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9da35ba1-d2cf-4b06-873b-ea3601d69512" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/server/Views/CourseSection/Game.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Assets/scripts/Question.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Assets/scripts/Question.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/ArtifactDB-lock" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/ArtifactDB-lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/2000b0aE-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/2000b0aE-inputdata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/2000b0aE.dag" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/2000b0aE.dag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/2000b0aE.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/2000b0aE.dag.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/TundraBuildState.state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/TundraBuildState.state.map" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/TundraBuildState.state.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/artifacts/2000b0aE.dag/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/artifacts/2000b0aE.dag/Assembly-CSharp-Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/artifacts/2000b0aE.dag/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/artifacts/2000b0aE.dag/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/artifacts/2000b0aE.dag/Assembly-CSharp.ref.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/artifacts/2000b0aE.dag/Assembly-CSharp.ref.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/artifacts/2000b0aE.dag/Assembly-CSharp.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/artifacts/2000b0aE.dag/Assembly-CSharp.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/backend_profiler0.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/backend_profiler0.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/backend_profiler1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/backend_profiler1.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/buildprogram0.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/buildprogram0.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/fullprofile.json" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/fullprofile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/tundra.digestcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Bee/tundra.log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/EditorInstance.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/LastSceneManagerSetup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/ProtocolInstance.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/Search/transactions.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/SourceAssetDB-lock" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/SourceAssetDB-lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Library/com.unity.ide.rider/PersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/com.unity.ide.rider/PersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Logs/AssetImportWorker1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/EditorBuildOutput/MethodMap.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/EditorBuildOutput/UnityLinkerToEditorData.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/FSTimeGet-22fb49b16af7817249b94891be2c89f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/FSTimeGet-8ddb4b0c27da2cff097d05845d6ca549" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/FSTimeGet-dad9a71a3d92e2380bb6174a20bfa1b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/PlayerBuildAnalyticsEvents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/PropertyDatabase_1265138678" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/PropertyDatabase_2066312223" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Accessibility.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/EditorToUnityLinkerData.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/MethodsToPreserve.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Microsoft.CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Microsoft.Win32.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Microsoft.Win32.Registry.AccessControl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Microsoft.Win32.Registry.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Mono.Data.Sqlite.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Mono.Data.Tds.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Mono.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/SerializedTypes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.AppContext.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Buffers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Collections.Concurrent.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Collections.NonGeneric.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Collections.Specialized.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Collections.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ComponentModel.Annotations.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ComponentModel.Composition.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ComponentModel.DataAnnotations.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ComponentModel.EventBasedAsync.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ComponentModel.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ComponentModel.TypeConverter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ComponentModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Configuration.Install.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Configuration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Console.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Data.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Data.DataSetExtensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Data.Entity.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Data.Linq.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Data.OracleClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Data.Services.Client.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Data.Services.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Data.SqlClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Data.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Design.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Diagnostics.Contracts.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Diagnostics.Debug.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Diagnostics.FileVersionInfo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Diagnostics.Process.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Diagnostics.StackTrace.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Diagnostics.TextWriterTraceListener.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Diagnostics.Tools.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Diagnostics.TraceEvent.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Diagnostics.TraceSource.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Diagnostics.Tracing.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.DirectoryServices.Protocols.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.DirectoryServices.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Drawing.Design.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Drawing.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Drawing.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Dynamic.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.EnterpriseServices.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Globalization.Calendars.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Globalization.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Globalization.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.Compression.FileSystem.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.Compression.ZipFile.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.Compression.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.FileSystem.AccessControl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.FileSystem.DriveInfo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.FileSystem.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.FileSystem.Watcher.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.FileSystem.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.IsolatedStorage.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.MemoryMappedFiles.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.Pipes.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.UnmanagedMemoryStream.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IO.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IdentityModel.Selectors.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.IdentityModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Linq.Expressions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Linq.Parallel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Linq.Queryable.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Linq.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Management.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Memory.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Messaging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.AuthenticationManager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.Cache.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.Http.WebRequest.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.HttpListener.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.Mail.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.NameResolution.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.NetworkInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.Ping.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.Requests.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.ServicePoint.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.Sockets.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.Utilities.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.WebHeaderCollection.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.WebSockets.Client.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.WebSockets.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Net.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Numerics.Vectors.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Numerics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ObjectModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Reflection.Context.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Reflection.DispatchProxy.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Reflection.Emit.ILGeneration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Reflection.Emit.Lightweight.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Reflection.Emit.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Reflection.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Reflection.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Reflection.TypeExtensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Reflection.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Resources.Reader.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Resources.ReaderWriter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Resources.ResourceManager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Resources.Writer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Caching.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.CompilerServices.VisualC.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.DurableInstancing.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Handles.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.InteropServices.WindowsRuntime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.InteropServices.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Loader.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Numerics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Remoting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Serialization.Formatters.Soap.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Serialization.Formatters.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Serialization.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Serialization.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Serialization.Xml.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.Serialization.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.AccessControl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Claims.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Cng.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Csp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.DeriveBytes.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Encryption.Aes.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Encryption.ECDiffieHellman.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Encryption.ECDsa.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Encryption.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Hashing.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Hashing.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.OpenSsl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Pkcs.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.RSA.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.RandomNumberGenerator.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Principal.Windows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.Principal.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.SecureString.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.Activation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.Discovery.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.Duplex.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.Internals.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.NetTcp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.Routing.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.Web.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceProcess.ServiceController.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ServiceProcess.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Text.Encoding.CodePages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Text.Encoding.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Text.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Text.RegularExpressions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Threading.AccessControl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Threading.Overlapped.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Threading.Tasks.Parallel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Threading.Tasks.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Threading.Thread.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Threading.ThreadPool.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Threading.Timer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Threading.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Transactions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.ValueTuple.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Web.ApplicationServices.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Web.DynamicData.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Web.Extensions.Design.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Web.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Web.RegularExpressions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Web.Services.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Web.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Windows.Forms.DataVisualization.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Windows.Forms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Windows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xaml.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.Linq.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.ReaderWriter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.Serialization.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.XDocument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.XPath.XDocument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.XPath.XmlDocument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.XPath.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.XmlDocument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.XmlSerializer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.Xsl.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.Xml.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/System.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/TypesInScenes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Analytics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Configuration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Device.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Environments.Internal.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Environments.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Internal.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Networking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Registration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Scheduler.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Telemetry.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.Threading.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Services.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.Timeline.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.VisualScripting.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.VisualScripting.Flow.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/Unity.VisualScripting.State.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.AIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.AccessibilityModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.AndroidJNIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.AnimationModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.AssetBundleModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.AudioModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.ClothModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.CoreModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.CrashReportingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.DSPGraphModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.DirectorModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.GIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.GameCenterModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.GridModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.HotReloadModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.IMGUIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.ImageConversionModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.InputLegacyModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.InputModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.JSONSerializeModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.LocalizationModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.ParticleSystemModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.PerformanceReportingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.Physics2DModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.PhysicsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.ProfilerModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.ScreenCaptureModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.SharedInternalsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.SpriteMaskModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.SpriteShapeModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.StreamingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.SubstanceModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.SubsystemsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.TLSModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.TerrainModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.TerrainPhysicsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.TextRenderingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.TilemapModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UIElementsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UIElementsNativeModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UNETModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UmbraModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UnityAnalyticsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UnityConnectModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UnityCurlModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UnityTestProtocolModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.VFXModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.VRModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.VehiclesModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.VideoModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.WebGLModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.WindModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.XRModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/UnityEngine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/mscorlib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/StagingArea/Data/Managed/netstandard.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/UnityLockfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/__Backupscenes/0.backup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/tempFile.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/tempFile.resG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/tempFile.resS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/Temp/workerlic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../game/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../game/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Controllers/CourseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Controllers/CourseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Controllers/CourseSectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Controllers/CourseSectionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Controllers/QuestionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Controllers/QuestionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/20221017205807_setup.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/20221017205807_setup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/20221017212536_courseupdate.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/20221017212536_courseupdate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/20221017213054_addedNullables.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/20221017213054_addedNullables.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Course.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/CourseSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/CourseSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/CourseSectionScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/CourseSectionScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Models/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Models/Question.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/Course/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Course/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/Course/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Course/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/CourseSection/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/CourseSection/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/CourseSection/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/CourseSection/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/CourseSection/Delete.cshtml.css" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/CourseSection/Delete.cshtml.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/CourseSection/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/CourseSection/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/CourseSection/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/CourseSection/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/CourseSection/Index.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Views/CourseSection/index.cshtml.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/server/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/wwwroot/unity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/wwwroot/unity/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +395,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31aad266a1a74c628dadf16da2c67c2e2fa00/09/a2ca0b56/ModelStateDictionary.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69d67832d3c14dc188bceb308b04e5d312c00/81/cf198d88/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96e62f673dd148ab85b453c5065e612294de00/cc/35276662/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9a3c399b3c474d52bd953838425aca3041c00/75/41e00d98/ValidationSummaryTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edc9d24212cf42ada73c39d1280a58bb1cc600/b7/f966ddd8/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/93bf8ca51564b3532dce6442f8ec6d3856e11622b484427b6e965ca60aba4b1/IdentityDbContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -106,6 +483,8 @@
       <workItem from="1665791286550" duration="3472000" />
       <workItem from="1665967951765" duration="9173000" />
       <workItem from="1666039290191" duration="24091000" />
+      <workItem from="1666139588245" duration="9132000" />
+      <workItem from="1666191310240" duration="517000" />
     </task>
     <servers />
   </component>

@@ -17,7 +17,7 @@ public class CourseSectionScore
     public int? CourseID { get; set; }
     public virtual Course? Course { get; set; }
 
-    public virtual ICollection<QuestionScore>? QuestionScores { get; set; }
+    public virtual ICollection<QuestionScore>? QuestionScores { get; set; } = new List<QuestionScore>();
 
     public int Score { get; set; }
 }

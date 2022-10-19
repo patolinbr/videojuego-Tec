@@ -41,7 +41,7 @@ namespace server.Controllers
                 return NotFound();
             }
 
-            var course = await _context.Courses
+            var course = await _context.Courses.Include(course => course.Sections)
                 .FirstOrDefaultAsync(m => m.CourseID == id);
             if (course == null)
             {
