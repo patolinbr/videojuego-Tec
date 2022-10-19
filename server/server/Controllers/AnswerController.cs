@@ -63,10 +63,12 @@ namespace server.Controllers
             {
                 _context.Add(answer);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                var found_question = await _context.Questions.FindAsync(answer.QuestionID);
+                return RedirectToAction("Details", "CourseSection", new {id = found_question.CourseSectionId});
             }
             ViewData["QuestionID"] = new SelectList(_context.Questions, "Id", "Id", answer.QuestionID);
-            return View(answer);
+            var question = await _context.Questions.FindAsync(answer.QuestionID);
+            return RedirectToAction("Details", "CourseSection", new { id = question.CourseSectionId });
         }
 
         // GET: Answer/Edit/5
