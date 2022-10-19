@@ -1,3 +1,7 @@
+.btn-primary{
+    background-color: red;
+}
+
 .header-background {
     height: 16rem;
     background: linear-gradient(242.8deg, #8381BA -15.67%, #8D6CAB 45.14%, #643385 99.11%);

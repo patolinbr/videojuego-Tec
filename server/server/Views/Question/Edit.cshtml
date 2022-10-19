@@ -37,8 +37,8 @@
                 <input type="hidden" asp-for="CourseID" class="form-control" asp-items="ViewBag.CourseID" value="@Model.CourseID"/>
                 <br/>
                 <div class="form-group">
-                    <a class="btn btn-primary" style="background:#643385;"asp-controller="CourseSection" asp-action="Details" asp-route-id="@Model.CourseSectionId">Back to List</a>
-                    <input type="submit" value="Save" class="btn btn-primary" style="background:#643385;"/>
+                    <a class="btn btn-primary" style="background:#643385;"asp-controller="CourseSection" asp-action="Details" asp-route-id="@Model.CourseSectionId">Regresar</a>
+                    <input type="submit" value="Guardar" class="btn btn-primary" style="background:#643385;" />
                     @{
                         var queryParamsQ = new Dictionary<string, string>
                         {

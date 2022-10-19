@@ -7,7 +7,7 @@
     <div class="container-md align-items-end mb-2 h-100 d-flex">
         <div class="row">
             <div class="col">
-                <h1 class="display-3" style="color: white"> Crear Pregunta</h1>
+                <h1 class="display-3" style="color: white"> Crear Curso</h1>
             </div>
         </div>
         <div class="row">
@@ -22,20 +22,20 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <br/>
                 <div class="form-group">
-                    <label asp-for="Title" class="control-label"></label>
+                    <label class="control-label">Titulo</label>
                     <input asp-for="Title" class="form-control"/>
                     <span asp-validation-for="Title" class="text-danger"></span>
                 </div>
                 <br/>
                 <div class="form-group">
-                    <label asp-for="Description" class="control-label"></label>
+                    <label class="control-label">Descripcion</label>
                     <textarea asp-for="Description" class="form-control" rows="4"></textarea>
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
                 <br/>
                 <div class="form-group">
-                    <a class="btn btn-primary" style="background:#643385;"asp-action="Index">Back to List</a>
-                    <input type="submit" value="Create" class="btn btn-primary" style="background:#643385;"/>
+                    <a class="btn btn-primary" style="background:#643385;"asp-action="Index">Regresar</a>
+                    <input type="submit" value="Crear" class="btn btn-primary" style="background:#643385;"/>
                 </div>
                 <br/>
             </form>

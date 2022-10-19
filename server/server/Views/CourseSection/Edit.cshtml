@@ -4,22 +4,21 @@
     ViewData["Title"] = "Edit";
 }
 
-<style>
-    h1 {color: #FFFFFF; margin-left:32px; margin-top:138px}
-    h4 {color: #FFFFFF; margin-left:32px;}
-    back {margin-left:32px}
-    card {margin-left:32px}
-</style>
-<div class="col-md-12 body">
-    <br/>
-    <h1>@ViewData["Title"]</h1>
-    <h4>CourseSection</h4>
+<div class="header-background">
+    <div class="container-md align-items-end mb-2 h-100 d-flex">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-3" style="color: white"> Editar Curso</h1>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
 </div>
-<hr/>
-<card class="col-md-8 card" style="background:#F4F4F4;">
-    <br/>
-    <div class="row" align="left">
-        <div class="col-md-11" style="margin-left:32px">
+<div class="container-md pt-2">
+    <div class="row">
+        <div class="col-8">
             <form asp-action="Edit">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="CourseSectionID"/>
@@ -44,15 +43,12 @@
                 <input type="hidden" asp-for="CourseID" class="form-control" value="@Model.CourseID"/>
                 <input type="hidden" asp-for="IdentityUserID" class="form-control" value="@Model.IdentityUserID"/>
                 <br/>
-                <div class="form-group" align="right">
+                <div class="form-group">
+                    <a class="btn btn-primary" style="background:#643385;"asp-controller="Course" asp-action="Details" asp-route-id="@Model.CourseSectionID">Regresar</a>
                     <input type="submit" value="Save" class="btn btn-primary" style="background:#643385;"/>
                 </div>
                 <br/>
             </form>
         </div>
     </div>
-</card>
-
-<back>
-    <a asp-controller="Course" asp-action="Details" asp-route-id="@Model.CourseID">Back to Course</a>
-</back>
+</div>
