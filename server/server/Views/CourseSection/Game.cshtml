@@ -1,3 +1,4 @@
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
 @model server.Models.CourseSection
 
 @{
@@ -33,7 +34,7 @@
 
         document.body.style.textAlign = "left";
       }
-
+      
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "/unity/Build/unity.data.unityweb",
         frameworkUrl: "/unity/Build/unity.framework.js.unityweb",
@@ -44,6 +45,24 @@
         productVersion: "0.1",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
+      }).then(unityInstance => {
+          @foreach (var question in Model.Questions)
+          {
+              @Html.Raw("unityInstance.SendMessage('TriviaCanvas', 'AddQuestion', '" + question.QuestionText + "');\n")
+              foreach (var answer in question.Answers)
+              {
+                  if (answer.Correct)
+                  {
+                      @Html.Raw("unityInstance.SendMessage('TriviaCanvas', 'AddCorrectAnswer', '" + answer.Text + "');\n")
+                  }
+                  else
+                  {
+                      @Html.Raw("unityInstance.SendMessage('TriviaCanvas', 'AddWrongAnswer', '" + answer.Text + "');\n")
+                  }
+              }
+          }
+      }) ;
+      
+      
     </script>
 }

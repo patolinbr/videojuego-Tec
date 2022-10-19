@@ -13,7 +13,7 @@ public class playerControll : MonoBehaviour
     float score;
     public Text ScoreText;
     public GameObject obstacle;
-    public GameObject questionBoard;
+    private GameObject questionBoard;
     private int activations = 0;
 
     // Start is called before the first frame update
@@ -22,6 +22,7 @@ public class playerControll : MonoBehaviour
         Physics.gravity = gravity;
         rb = GetComponent<Rigidbody>();
         score = 0;
+        questionBoard = GameObject.Find("TriviaCanvas");
     }
 
     // Update is called once per frame
@@ -31,7 +32,7 @@ public class playerControll : MonoBehaviour
         {
             Debug.Log("Starting question");
             activations++;
-            questionBoard.SetActive(true);
+            questionBoard.GetComponent<QuestionManager>().Show();
             Time.timeScale = 0f;
         }
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)

@@ -1,42 +1,92 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class QuestionManager : MonoBehaviour
 {
-    public string questionText;
+    public List<string> questions = new();
 
-    public List<GameObject> answers;
+    private Dictionary<int, List<Tuple<string, bool>>> _answers = new();
 
-    private int _currentQuestion = 0;
+    private List<GameObject> _answerInstances = new();
 
-    void Awake()
+    public GameObject AnswerObject;
+
+    public GameObject QuestionTextObject;
+
+    public GameObject AnswersContainerObject;
+
+    private int _currentQuestionIndex = 0;
+
+    public void AddQuestion(string question)
     {
+        Debug.Log("Adding question");
+
+        questions.Add(question);
+    }
+
+    public void AddCorrectAnswer(string answer)
+    {
+        Debug.Log("Adding correct answer");
+        if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(_currentQuestionIndex, new());
+        _answers[questions.Count - 1].Add(new(answer, true));
+    }
+
+    public void AddWrongAnswer(string answer)
+    {
+        Debug.Log("Adding wrong answer");
+        if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(_currentQuestionIndex, new());
+        _answers[questions.Count - 1].Add(new(answer, false));
+    }
+
+    private void Awake()
+    {
+        Debug.Log("Trivia canvas awake");
         DontDestroyOnLoad(gameObject);
-    }
-
-    void AddQuestion(string question)
-    {
-    }
-
-    void AddRightAnswer(string answer)
-    {
-    }
-
-    void AddWrongAnswer(string answer)
-    {
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (var answer in answers)
+        for (int index = 0; index < _answers[_currentQuestionIndex].Count; index++)
         {
-            var answerButton = answer.GetComponent(typeof(Button)) as Button;
+        }
+        // var answerButton = answer.GetComponent(typeof(Button)) as Button;
 
-            if (answer.CompareTag("correct"))
+        // if (answer.CompareTag("correct"))
+        // {
+        // answerButton.onClick.AddListener(CorrectAnswer);
+        // }
+        // else
+        // {
+        // answerButton.onClick.AddListener(WrongAnswer);
+        // }
+    }
+
+    public void Show()
+    {
+        Debug.Log("Setting question text");
+        QuestionTextObject.GetComponent<TextMeshProUGUI>().text = questions[_currentQuestionIndex];
+
+        Debug.Log("Getting answer list");
+        var answers = _answers[_currentQuestionIndex];
+
+        for (int i = 0; i < answers.Count; i++)
+        {
+            var answer = answers[i];
+            Debug.Log("creating answer instance");
+            var answerObject = Instantiate(AnswerObject, AnswersContainerObject.transform);
+
+            _answerInstances.Add(answerObject);
+
+            Debug.Log("Setting answer button listener");
+            var answerButton = answerObject.GetComponent<Button>();
+
+            if (answer.Item2)
             {
                 answerButton.onClick.AddListener(CorrectAnswer);
             }
@@ -44,7 +94,13 @@ public class QuestionManager : MonoBehaviour
             {
                 answerButton.onClick.AddListener(WrongAnswer);
             }
+
+            Debug.Log("Setting answer object text");
+            answerObject.GetComponent<TextMeshProUGUI>().text = answer.Item1;
         }
+
+        QuestionTextObject.SetActive(true);
+        AnswersContainerObject.SetActive(true);
     }
 
 
@@ -52,7 +108,20 @@ public class QuestionManager : MonoBehaviour
     {
         Debug.Log("Right!");
         Time.timeScale = 1f;
-        gameObject.SetActive(false);
+
+        foreach (var answerObject in _answerInstances)
+        {
+            Destroy(answerObject);
+        }
+
+        _answerInstances = new();
+
+        _currentQuestionIndex++;
+
+        QuestionTextObject.SetActive(false);
+        AnswersContainerObject.SetActive(false);
+        
+        
     }
 
     void WrongAnswer()
@@ -60,12 +129,8 @@ public class QuestionManager : MonoBehaviour
         Debug.Log("Wrong!");
         Time.timeScale = 1f;
 
-        gameObject.SetActive(false);
+        QuestionTextObject.SetActive(false);
+        AnswersContainerObject.SetActive(false);
         SceneManager.LoadScene(sceneBuildIndex: 2);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }
