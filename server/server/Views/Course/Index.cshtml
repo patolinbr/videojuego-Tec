@@ -3,22 +3,21 @@
 @{
     ViewData["Title"] = "Index";
 }
-<style>
-    h1 { color: #FFFFFF; margin-left:32px; margin-top:168px}
-    create {margin-left:32px}
-    card {margin-left:32px}
-</style>
-<div class="col-md-12 body">
-    <br/>
-    <h1>Cursos</h1>
-</div>
-<div>
-    <br/>
+<div class="header-background">
+    <div class="container-md align-items-end mb-2 h-100 d-flex">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-3" style="color: white"> Cursos</h1>
+            </div>
+        </div>
+        <div class="row">
 
-    <div class="container-fluid ">
+        </div>
+</div>
+    <div class="container-md pt-2 ">
         <div class="row mb-4">
             <div class="col-4">
-                <a class="btn btn-primary" asp-action="Create">Crear un curso nuevo</a>
+                <a style="background:#643385" class="btn btn-primary" asp-action="Create">Crear un curso nuevo</a>
             </div>
         </div>
 
@@ -30,7 +29,7 @@
                         <div class="card-body">
                             <h5 class="card-title">@Html.DisplayFor(modelItem => course.Title)</h5>
                             <p class="card-text">@Html.DisplayFor(modelItem => course.Description)</p>
-                            <a class="btn btn-primary" asp-action="Details" asp-route-id="@course.CourseID">Ver mas</a>
+                            <a style="background:#643385" class="btn btn-primary" asp-action="Details" asp-route-id="@course.CourseID">Ver mas</a>
                         </div>
                     </div>
                 </div>

@@ -48,8 +48,8 @@
     </div>
         
 
-    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.CourseID">Editar</a>
-    <a class="btn btn-primary" asp-action="Delete" asp-route-id="@Model.CourseID">Elminar</a>
+    <a style="background:#643385"class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.CourseID">Editar</a>
+    <a style="background:#643385"class="btn btn-primary" asp-action="Delete" asp-route-id="@Model.CourseID">Elminar</a>
 
     @{
         var queryParams = new Dictionary<string, string>
@@ -58,6 +58,6 @@
         };
     }
 
-    <a class="btn btn-primary" asp-controller="CourseSection" asp-action="Create" asp-all-route-data="queryParams">Agregar seccion</a>
+    <a style="background:#643385" class="btn btn-primary" asp-controller="CourseSection" asp-action="Create" asp-all-route-data="queryParams">Agregar seccion</a>
 
 </div>

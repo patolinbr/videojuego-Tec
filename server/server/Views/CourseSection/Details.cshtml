@@ -59,8 +59,8 @@
     </div>
     <div class="row mt-4">
         <div class="col">
-            <a class="btn btn-primary" asp-action="Game" asp-route-id="@Model.CourseSectionID">Ir a juego</a>
-            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.CourseSectionID">Editar</a>
+            <a class="btn btn-primary" style="background:#643385;"asp-action="Game" asp-route-id="@Model.CourseSectionID">Ir a juego</a>
+            <a class="btn btn-primary" style="background:#643385;"asp-action="Edit" asp-route-id="@Model.CourseSectionID">Editar</a>
 
             @{
                 var queryParams = new Dictionary<string, string>
@@ -69,7 +69,7 @@
                 };
             }
 
-            <a class="btn btn-primary" asp-controller="Question" asp-action="Create" asp-all-route-data="queryParams">Agregar pregunta</a>
+            <a class="btn btn-primary" style="background:#643385;" asp-controller="Question" asp-action="Create" asp-all-route-data="queryParams">Agregar pregunta</a>
         </div>
     </div>
 
