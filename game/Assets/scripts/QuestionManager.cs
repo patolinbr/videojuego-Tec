@@ -125,6 +125,11 @@ public class QuestionManager : MonoBehaviour
 
         QuestionTextObject.SetActive(false);
         AnswersContainerObject.SetActive(false);
+
+        if (_currentQuestionIndex >= questions.Count)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     void WrongAnswer()

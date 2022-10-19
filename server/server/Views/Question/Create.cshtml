@@ -14,9 +14,9 @@
         <div class="row">
 
         </div>
-  </div>
-<div class="container-md pt-2">
-    <div class="row">
+    </div>
+    <div class="container-md pt-2">
+        <div class="row">
             <div class="col-8">
                 <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -25,20 +25,21 @@
                         <input asp-for="QuestionText" class="form-control"/>
                         <span asp-validation-for="QuestionText" class="text-danger"></span>
                     </div>
-                    <br />
+                    <br/>
                     <div class="form-group">
                         <label asp-for="Position" class="control-label"></label>
                         <input asp-for="Position" class="form-control"/>
                         <span asp-validation-for="Position" class="text-danger"></span>
                     </div>
                     <input asp-for="CourseSectionId" type="hidden" value="@ViewData["CourseSectionId"]"/>
-                    <br />
+                    <br/>
                     <div class="form-group">
-                        <a class="btn btn-primary" style="background:#643385;" asp-action="Index">Back to List</a>
+                        <a class="btn btn-primary" style="background:#643385;" asp-action="Details" asp-controller="CourseSection" asp-route-id="@ViewData["CourseSectionId"]">Regresar</a>
                         <input type="submit" value="Create" class="btn btn-primary"style="background:#643385;"/>
                     </div>
-                    <br />
+                    <br/>
                 </form>
             </div>
+        </div>
     </div>
 </div>

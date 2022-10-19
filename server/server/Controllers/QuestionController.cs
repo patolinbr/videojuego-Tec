@@ -24,33 +24,6 @@ namespace server.Controllers
             _userManager = userManager;
         }
 
-        // GET: Question
-        public async Task<IActionResult> Index()
-        {
-            var applicationDbContext = _context.Questions.Include(q => q.Course).Include(q => q.CourseSection);
-            return View(await applicationDbContext.ToListAsync());
-        }
-
-        // GET: Question/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Questions == null)
-            {
-                return NotFound();
-            }
-
-            var question = await _context.Questions
-                .Include(q => q.Course)
-                .Include(q => q.CourseSection)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (question == null)
-            {
-                return NotFound();
-            }
-
-            return View(question);
-        }
-
         // GET: Question/Create
         public IActionResult Create(int courseSectionId)
         {
@@ -138,13 +111,13 @@ namespace server.Controllers
                     }
                 }
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", "CourseSection", new { id = question.CourseSectionId });
             }
 
             ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "CourseID", question.CourseID);
             ViewData["CourseSectionId"] = new SelectList(_context.CourseSections, "CourseSectionID", "CourseSectionID",
                 question.CourseSectionId);
-            return View(question);
+            return RedirectToAction("Details", "CourseSection", new { id = question.CourseSectionId });
         }
 
         // GET: Question/Delete/5
@@ -184,7 +157,7 @@ namespace server.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Details", "CourseSection", new { id = question.CourseSectionId });
         }
 
         private bool QuestionExists(int id)

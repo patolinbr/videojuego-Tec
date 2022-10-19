@@ -19,31 +19,6 @@ namespace server.Controllers
             _context = context;
         }
 
-        // GET: Answer
-        public async Task<IActionResult> Index()
-        {
-            var applicationDbContext = _context.Answers.Include(a => a.Question);
-            return View(await applicationDbContext.ToListAsync());
-        }
-
-        // GET: Answer/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Answers == null)
-            {
-                return NotFound();
-            }
-
-            var answer = await _context.Answers
-                .Include(a => a.Question)
-                .FirstOrDefaultAsync(m => m.AnswerID == id);
-            if (answer == null)
-            {
-                return NotFound();
-            }
-
-            return View(answer);
-        }
 
         // GET: Answer/Create
         public IActionResult Create(int questionId)
@@ -64,8 +39,9 @@ namespace server.Controllers
                 _context.Add(answer);
                 await _context.SaveChangesAsync();
                 var found_question = await _context.Questions.FindAsync(answer.QuestionID);
-                return RedirectToAction("Details", "CourseSection", new {id = found_question.CourseSectionId});
+                return RedirectToAction("Details", "CourseSection", new { id = found_question.CourseSectionId });
             }
+
             ViewData["QuestionID"] = new SelectList(_context.Questions, "Id", "Id", answer.QuestionID);
             var question = await _context.Questions.FindAsync(answer.QuestionID);
             return RedirectToAction("Details", "CourseSection", new { id = question.CourseSectionId });
@@ -84,6 +60,7 @@ namespace server.Controllers
             {
                 return NotFound();
             }
+
             ViewData["QuestionID"] = new SelectList(_context.Questions, "Id", "Id", answer.QuestionID);
             return View(answer);
         }
@@ -118,10 +95,12 @@ namespace server.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+
+                return RedirectToAction("Edit", "Question", new { id = answer.QuestionID });
             }
+
             ViewData["QuestionID"] = new SelectList(_context.Questions, "Id", "Id", answer.QuestionID);
-            return View(answer);
+            return RedirectToAction("Edit", "Question", new { id = answer.QuestionID });
         }
 
         // GET: Answer/Delete/5
@@ -152,19 +131,20 @@ namespace server.Controllers
             {
                 return Problem("Entity set 'ApplicationDbContext.Answers'  is null.");
             }
+
             var answer = await _context.Answers.FindAsync(id);
             if (answer != null)
             {
                 _context.Answers.Remove(answer);
             }
-            
+
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Edit", "Question", new { id = answer.QuestionID });
         }
 
         private bool AnswerExists(int id)
         {
-          return (_context.Answers?.Any(e => e.AnswerID == id)).GetValueOrDefault();
+            return (_context.Answers?.Any(e => e.AnswerID == id)).GetValueOrDefault();
         }
     }
 }

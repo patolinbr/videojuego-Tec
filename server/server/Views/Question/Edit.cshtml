@@ -8,58 +8,48 @@
     <div class="container-md align-items-end mb-2 h-100 d-flex">
         <div class="row">
             <div class="col">
-                <h1 class="display-3" style="color: white"> Crear Pregunta</h1>
+                <h1 class="display-3" style="color: white"> Editar Pregunta</h1>
             </div>
         </div>
         <div class="row">
 
         </div>
+    </div>
 </div>
 <div class="container-md pt-2">
     <div class="row">
-            <div class="col-8">
-                <form asp-action="Edit">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <input type="hidden" asp-for="Id" />
-                    <div class="form-group">
-                        <label asp-for="QuestionText" class="control-label"></label>
-                        <input asp-for="QuestionText" class="form-control" />
-                        <span asp-validation-for="QuestionText" class="text-danger"></span>
-                    </div>
-                    <br />
-                    <div class="form-group">
-                        <label asp-for="Position" class="control-label"></label>
-                        <input asp-for="Position" class="form-control" />
-                        <span asp-validation-for="Position" class="text-danger"></span>
-                    </div>
-                    <br />
-                    <div class="form-group">
-                        <label asp-for="CourseSectionId" class="control-label"></label>
-                        <select asp-for="CourseSectionId" class="form-control" asp-items="ViewBag.CourseSectionId"></select>
-                        <span asp-validation-for="CourseSectionId" class="text-danger"></span>
-                    </div>
-                    <br />
-                    <div class="form-group">
-                        <label asp-for="CourseID" class="control-label"></label>
-                        <select asp-for="CourseID" class="form-control" asp-items="ViewBag.CourseID"></select>
-                        <span asp-validation-for="CourseID" class="text-danger"></span>
-                    </div>
-                    <br />
-                    <div class="form-group">
-                            <a class="btn btn-primary" style="background:#643385;"asp-controller="CourseSection" asp-action="Details" asp-route-id="@Model.CourseSectionId">Back to List</a>
-                            <input type="submit" value="Save" class="btn btn-primary" style="background:#643385;"/>
-                            @{
-                                var queryParamsQ = new Dictionary<string, string>
-                                {
-                                    { "QuestionID", Model.Id.ToString() }
-                                };
-                            }
+        <div class="col-8">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id"/>
+                <div class="form-group">
+                    <label asp-for="QuestionText" class="control-label"></label>
+                    <input asp-for="QuestionText" class="form-control"/>
+                    <span asp-validation-for="QuestionText" class="text-danger"></span>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label asp-for="Position" class="control-label"></label>
+                    <input asp-for="Position" class="form-control"/>
+                    <span asp-validation-for="Position" class="text-danger"></span>
+                </div>
+                <input type="hidden" asp-for="CourseSectionId" class="form-control" asp-items="ViewBag.CourseSectionId" value="@Model.CourseSectionId"/>
+                <input type="hidden" asp-for="CourseID" class="form-control" asp-items="ViewBag.CourseID" value="@Model.CourseID"/>
+                <br/>
+                <div class="form-group">
+                    <a class="btn btn-primary" style="background:#643385;"asp-controller="CourseSection" asp-action="Details" asp-route-id="@Model.CourseSectionId">Back to List</a>
+                    <input type="submit" value="Save" class="btn btn-primary" style="background:#643385;"/>
+                    @{
+                        var queryParamsQ = new Dictionary<string, string>
+                        {
+                            { "QuestionID", Model.Id.ToString() }
+                        };
+                    }
 
-                            <a class="btn btn-primary" style="background:#643385;" asp-controller="Answer" asp-action="Create" asp-all-route-data="queryParamsQ">Anadir Respuesta</a>
-                    </div>
-                    <br />
-                </form>
-            </div>
+                    <a class="btn btn-primary" style="background:#643385;" asp-controller="Answer" asp-action="Create" asp-all-route-data="queryParamsQ">Anadir Respuesta</a>
+                </div>
+                <br/>
+            </form>
+        </div>
     </div>
 </div>
-

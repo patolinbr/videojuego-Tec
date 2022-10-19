@@ -115,8 +115,8 @@ namespace server.Controllers
                 return NotFound();
             }
 
-            ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "CourseID", courseSection.CourseID);
-            ViewData["IdentityUserID"] = new SelectList(_context.Users, "Id", "Id", courseSection.IdentityUserID);
+            // ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "CourseID", courseSection.CourseID);
+            // ViewData["IdentityUserID"] = new SelectList(_context.Users, "Id", "Id", courseSection.IdentityUserID);
             return View(courseSection);
         }
 
@@ -153,12 +153,13 @@ namespace server.Controllers
                     }
                 }
 
-                return RedirectToAction("Details", "Course", new { id = courseSection.CourseID });
+                return RedirectToAction("Details", "CourseSection", new { id = courseSection.CourseSectionID });
             }
 
             ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "CourseID", courseSection.CourseID);
             ViewData["IdentityUserID"] = new SelectList(_context.Users, "Id", "Id", courseSection.IdentityUserID);
-            return View(courseSection);
+
+            return RedirectToAction("Details", "CourseSection", new { id = courseSection.CourseSectionID });
         }
 
         // GET: CourseSection/Delete/5

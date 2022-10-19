@@ -104,6 +104,7 @@
      <None Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Anton OFL.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+     <None Include="Assets/StreamingAssets/UnityServicesProjectConfiguration.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets/Enemy Galore 1 - Pixel Art/Read Me.txt" />
      <None Include="Assets/PixelTilesForSideScroller/readme_en.txt" />
