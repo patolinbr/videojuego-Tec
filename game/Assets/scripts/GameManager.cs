@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
     bool gameHasEnded = false;
 
     int restartdelay = 0;
-    public void gameOver ()
+
+    public void gameOver()
     {
         if (gameHasEnded == false)
         {
@@ -15,7 +16,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("game over");
             Invoke("Restart", restartdelay);
         }
-        
     }
 
     void Restart()

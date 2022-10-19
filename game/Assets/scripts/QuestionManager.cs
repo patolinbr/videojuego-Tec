@@ -32,15 +32,20 @@ public class QuestionManager : MonoBehaviour
     public void AddCorrectAnswer(string answer)
     {
         Debug.Log("Adding correct answer");
-        if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(_currentQuestionIndex, new());
+        if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(questions.Count - 1, new());
         _answers[questions.Count - 1].Add(new(answer, true));
     }
 
     public void AddWrongAnswer(string answer)
     {
         Debug.Log("Adding wrong answer");
-        if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(_currentQuestionIndex, new());
+        if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(questions.Count - 1, new());
         _answers[questions.Count - 1].Add(new(answer, false));
+    }
+
+    public void Reset()
+    {
+        _currentQuestionIndex = 0;
     }
 
     private void Awake()
@@ -120,8 +125,6 @@ public class QuestionManager : MonoBehaviour
 
         QuestionTextObject.SetActive(false);
         AnswersContainerObject.SetActive(false);
-        
-        
     }
 
     void WrongAnswer()

@@ -7326,6 +7326,8 @@ inline QuestionManager_tE0BC8F13441778B5C9F1D1AEF488221FBB444213* GameObject_Get
 {
 	return ((  QuestionManager_tE0BC8F13441778B5C9F1D1AEF488221FBB444213* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
 }
+// System.Void QuestionManager::Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuestionManager_Reset_mFE0D3DF8546A38EFFFECB42268FCD0B23E61B882 (QuestionManager_tE0BC8F13441778B5C9F1D1AEF488221FBB444213* __this, const RuntimeMethod* method) ;
 // System.Void QuestionManager::Show()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuestionManager_Show_m0FC8CF2C89DA9A34158714A2439331E0054E2A4A (QuestionManager_tE0BC8F13441778B5C9F1D1AEF488221FBB444213* __this, const RuntimeMethod* method) ;
 // System.String System.Single::ToString(System.String)
@@ -10865,7 +10867,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuestionManager_AddCorrectAnswer_mC8EFBF
 		// Debug.Log("Adding correct answer");
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral4A7E8FB9CD981C0437DF6F5A9EC619FFB02CCD1F, NULL);
-		// if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(_currentQuestionIndex, new());
+		// if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(questions.Count - 1, new());
 		Dictionary_2_t0CFCEE4362420ECD12C4AA6475EFB6D31593AF9F* L_0 = __this->____answers_5;
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_1 = __this->___questions_4;
 		int32_t L_2;
@@ -10874,31 +10876,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuestionManager_AddCorrectAnswer_mC8EFBF
 		L_3 = Dictionary_2_ContainsKey_m2A61EBAED868FA057A173E2938F20D0C3788A914(L_0, ((int32_t)il2cpp_codegen_subtract(L_2, 1)), Dictionary_2_ContainsKey_m2A61EBAED868FA057A173E2938F20D0C3788A914_RuntimeMethod_var);
 		if (L_3)
 		{
-			goto IL_003a;
+			goto IL_0041;
 		}
 	}
 	{
-		// if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(_currentQuestionIndex, new());
+		// if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(questions.Count - 1, new());
 		Dictionary_2_t0CFCEE4362420ECD12C4AA6475EFB6D31593AF9F* L_4 = __this->____answers_5;
-		int32_t L_5 = __this->____currentQuestionIndex_10;
-		List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC* L_6 = (List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC*)il2cpp_codegen_object_new(List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC_il2cpp_TypeInfo_var);
-		List_1__ctor_mA3352BF5831773BE1A81BD2CF5CEF0A654C8890C(L_6, List_1__ctor_mA3352BF5831773BE1A81BD2CF5CEF0A654C8890C_RuntimeMethod_var);
-		Dictionary_2_Add_m72A6A69F7B897582BC6699E76E2FAC3FF3BFC178(L_4, L_5, L_6, Dictionary_2_Add_m72A6A69F7B897582BC6699E76E2FAC3FF3BFC178_RuntimeMethod_var);
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_5 = __this->___questions_4;
+		int32_t L_6;
+		L_6 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_5, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC* L_7 = (List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC*)il2cpp_codegen_object_new(List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC_il2cpp_TypeInfo_var);
+		List_1__ctor_mA3352BF5831773BE1A81BD2CF5CEF0A654C8890C(L_7, List_1__ctor_mA3352BF5831773BE1A81BD2CF5CEF0A654C8890C_RuntimeMethod_var);
+		Dictionary_2_Add_m72A6A69F7B897582BC6699E76E2FAC3FF3BFC178(L_4, ((int32_t)il2cpp_codegen_subtract(L_6, 1)), L_7, Dictionary_2_Add_m72A6A69F7B897582BC6699E76E2FAC3FF3BFC178_RuntimeMethod_var);
 	}
 
-IL_003a:
+IL_0041:
 	{
 		// _answers[questions.Count - 1].Add(new(answer, true));
-		Dictionary_2_t0CFCEE4362420ECD12C4AA6475EFB6D31593AF9F* L_7 = __this->____answers_5;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_8 = __this->___questions_4;
-		int32_t L_9;
-		L_9 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_8, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
-		List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC* L_10;
-		L_10 = Dictionary_2_get_Item_m2F39913D1AB3808A3E634C3C03109D9577F04F65(L_7, ((int32_t)il2cpp_codegen_subtract(L_9, 1)), Dictionary_2_get_Item_m2F39913D1AB3808A3E634C3C03109D9577F04F65_RuntimeMethod_var);
-		String_t* L_11 = ___answer0;
-		Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0* L_12 = (Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0*)il2cpp_codegen_object_new(Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0_il2cpp_TypeInfo_var);
-		Tuple_2__ctor_mCD97F2C3F25CE313D580816892E67086596E60E8(L_12, L_11, (bool)1, Tuple_2__ctor_mCD97F2C3F25CE313D580816892E67086596E60E8_RuntimeMethod_var);
-		List_1_Add_m3B9C0FA552A7A38E5010B7805BF9CE89404C5A1F_inline(L_10, L_12, List_1_Add_m3B9C0FA552A7A38E5010B7805BF9CE89404C5A1F_RuntimeMethod_var);
+		Dictionary_2_t0CFCEE4362420ECD12C4AA6475EFB6D31593AF9F* L_8 = __this->____answers_5;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_9 = __this->___questions_4;
+		int32_t L_10;
+		L_10 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_9, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC* L_11;
+		L_11 = Dictionary_2_get_Item_m2F39913D1AB3808A3E634C3C03109D9577F04F65(L_8, ((int32_t)il2cpp_codegen_subtract(L_10, 1)), Dictionary_2_get_Item_m2F39913D1AB3808A3E634C3C03109D9577F04F65_RuntimeMethod_var);
+		String_t* L_12 = ___answer0;
+		Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0* L_13 = (Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0*)il2cpp_codegen_object_new(Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0_il2cpp_TypeInfo_var);
+		Tuple_2__ctor_mCD97F2C3F25CE313D580816892E67086596E60E8(L_13, L_12, (bool)1, Tuple_2__ctor_mCD97F2C3F25CE313D580816892E67086596E60E8_RuntimeMethod_var);
+		List_1_Add_m3B9C0FA552A7A38E5010B7805BF9CE89404C5A1F_inline(L_11, L_13, List_1_Add_m3B9C0FA552A7A38E5010B7805BF9CE89404C5A1F_RuntimeMethod_var);
 		// }
 		return;
 	}
@@ -10926,7 +10930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuestionManager_AddWrongAnswer_m2896EF1E
 		// Debug.Log("Adding wrong answer");
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral76114A2C783DA48BA81BCBED5B667A5F5ACD4B70, NULL);
-		// if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(_currentQuestionIndex, new());
+		// if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(questions.Count - 1, new());
 		Dictionary_2_t0CFCEE4362420ECD12C4AA6475EFB6D31593AF9F* L_0 = __this->____answers_5;
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_1 = __this->___questions_4;
 		int32_t L_2;
@@ -10935,31 +10939,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuestionManager_AddWrongAnswer_m2896EF1E
 		L_3 = Dictionary_2_ContainsKey_m2A61EBAED868FA057A173E2938F20D0C3788A914(L_0, ((int32_t)il2cpp_codegen_subtract(L_2, 1)), Dictionary_2_ContainsKey_m2A61EBAED868FA057A173E2938F20D0C3788A914_RuntimeMethod_var);
 		if (L_3)
 		{
-			goto IL_003a;
+			goto IL_0041;
 		}
 	}
 	{
-		// if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(_currentQuestionIndex, new());
+		// if (!_answers.ContainsKey(questions.Count - 1)) _answers.Add(questions.Count - 1, new());
 		Dictionary_2_t0CFCEE4362420ECD12C4AA6475EFB6D31593AF9F* L_4 = __this->____answers_5;
-		int32_t L_5 = __this->____currentQuestionIndex_10;
-		List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC* L_6 = (List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC*)il2cpp_codegen_object_new(List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC_il2cpp_TypeInfo_var);
-		List_1__ctor_mA3352BF5831773BE1A81BD2CF5CEF0A654C8890C(L_6, List_1__ctor_mA3352BF5831773BE1A81BD2CF5CEF0A654C8890C_RuntimeMethod_var);
-		Dictionary_2_Add_m72A6A69F7B897582BC6699E76E2FAC3FF3BFC178(L_4, L_5, L_6, Dictionary_2_Add_m72A6A69F7B897582BC6699E76E2FAC3FF3BFC178_RuntimeMethod_var);
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_5 = __this->___questions_4;
+		int32_t L_6;
+		L_6 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_5, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC* L_7 = (List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC*)il2cpp_codegen_object_new(List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC_il2cpp_TypeInfo_var);
+		List_1__ctor_mA3352BF5831773BE1A81BD2CF5CEF0A654C8890C(L_7, List_1__ctor_mA3352BF5831773BE1A81BD2CF5CEF0A654C8890C_RuntimeMethod_var);
+		Dictionary_2_Add_m72A6A69F7B897582BC6699E76E2FAC3FF3BFC178(L_4, ((int32_t)il2cpp_codegen_subtract(L_6, 1)), L_7, Dictionary_2_Add_m72A6A69F7B897582BC6699E76E2FAC3FF3BFC178_RuntimeMethod_var);
 	}
 
-IL_003a:
+IL_0041:
 	{
 		// _answers[questions.Count - 1].Add(new(answer, false));
-		Dictionary_2_t0CFCEE4362420ECD12C4AA6475EFB6D31593AF9F* L_7 = __this->____answers_5;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_8 = __this->___questions_4;
-		int32_t L_9;
-		L_9 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_8, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
-		List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC* L_10;
-		L_10 = Dictionary_2_get_Item_m2F39913D1AB3808A3E634C3C03109D9577F04F65(L_7, ((int32_t)il2cpp_codegen_subtract(L_9, 1)), Dictionary_2_get_Item_m2F39913D1AB3808A3E634C3C03109D9577F04F65_RuntimeMethod_var);
-		String_t* L_11 = ___answer0;
-		Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0* L_12 = (Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0*)il2cpp_codegen_object_new(Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0_il2cpp_TypeInfo_var);
-		Tuple_2__ctor_mCD97F2C3F25CE313D580816892E67086596E60E8(L_12, L_11, (bool)0, Tuple_2__ctor_mCD97F2C3F25CE313D580816892E67086596E60E8_RuntimeMethod_var);
-		List_1_Add_m3B9C0FA552A7A38E5010B7805BF9CE89404C5A1F_inline(L_10, L_12, List_1_Add_m3B9C0FA552A7A38E5010B7805BF9CE89404C5A1F_RuntimeMethod_var);
+		Dictionary_2_t0CFCEE4362420ECD12C4AA6475EFB6D31593AF9F* L_8 = __this->____answers_5;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_9 = __this->___questions_4;
+		int32_t L_10;
+		L_10 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_9, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		List_1_t257469B802243727BDF6FA8D825FA90FC38BE0FC* L_11;
+		L_11 = Dictionary_2_get_Item_m2F39913D1AB3808A3E634C3C03109D9577F04F65(L_8, ((int32_t)il2cpp_codegen_subtract(L_10, 1)), Dictionary_2_get_Item_m2F39913D1AB3808A3E634C3C03109D9577F04F65_RuntimeMethod_var);
+		String_t* L_12 = ___answer0;
+		Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0* L_13 = (Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0*)il2cpp_codegen_object_new(Tuple_2_t0DAB2B8F6658C35621CB258DF0BB1EDE0EE025C0_il2cpp_TypeInfo_var);
+		Tuple_2__ctor_mCD97F2C3F25CE313D580816892E67086596E60E8(L_13, L_12, (bool)0, Tuple_2__ctor_mCD97F2C3F25CE313D580816892E67086596E60E8_RuntimeMethod_var);
+		List_1_Add_m3B9C0FA552A7A38E5010B7805BF9CE89404C5A1F_inline(L_11, L_13, List_1_Add_m3B9C0FA552A7A38E5010B7805BF9CE89404C5A1F_RuntimeMethod_var);
+		// }
+		return;
+	}
+}
+// System.Void QuestionManager::Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuestionManager_Reset_mFE0D3DF8546A38EFFFECB42268FCD0B23E61B882 (QuestionManager_tE0BC8F13441778B5C9F1D1AEF488221FBB444213* __this, const RuntimeMethod* method) 
+{
+	{
+		// _currentQuestionIndex = 0;
+		__this->____currentQuestionIndex_10 = 0;
 		// }
 		return;
 	}
@@ -11757,6 +11773,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void playerControll_Awake_mE630355235511183C3
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisQuestionManager_tE0BC8F13441778B5C9F1D1AEF488221FBB444213_m718DEF9C91A7257B93A924960EEB5156CC6CA736_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCA82727FDDF81205D9C19EF2EE50B9A92166D733);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -11776,6 +11793,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void playerControll_Awake_mE630355235511183C3
 		L_2 = GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300(_stringLiteralCA82727FDDF81205D9C19EF2EE50B9A92166D733, NULL);
 		__this->___questionBoard_12 = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___questionBoard_12), (void*)L_2);
+		// questionBoard.GetComponent<QuestionManager>().Reset();
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___questionBoard_12;
+		QuestionManager_tE0BC8F13441778B5C9F1D1AEF488221FBB444213* L_4;
+		L_4 = GameObject_GetComponent_TisQuestionManager_tE0BC8F13441778B5C9F1D1AEF488221FBB444213_m718DEF9C91A7257B93A924960EEB5156CC6CA736(L_3, GameObject_GetComponent_TisQuestionManager_tE0BC8F13441778B5C9F1D1AEF488221FBB444213_m718DEF9C91A7257B93A924960EEB5156CC6CA736_RuntimeMethod_var);
+		QuestionManager_Reset_mFE0D3DF8546A38EFFFECB42268FCD0B23E61B882(L_4, NULL);
 		// }
 		return;
 	}

@@ -50,12 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4aa6cf5247bbcea0b6f351dea9b6772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: 
-  answers:
-  - 
-  - 
-  - 
-  - 
+  questions: []
   AnswerObject: {fileID: 0}
   QuestionTextObject: {fileID: 0}
   AnswersContainerObject: {fileID: 0}
@@ -79,7 +74,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 400, y: 50}
+  m_CellSize: {x: 800, y: 50}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -333,8 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4aa6cf5247bbcea0b6f351dea9b6772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: 
-  answers: []
+  questions: []
   AnswerObject: {fileID: 2404411571070302612, guid: 345ff1f53636ecfab9230ce65499d36c, type: 3}
   QuestionTextObject: {fileID: 7606188721451759724}
   AnswersContainerObject: {fileID: 7606188720746231654}

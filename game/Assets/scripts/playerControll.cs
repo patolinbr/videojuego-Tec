@@ -23,6 +23,8 @@ public class playerControll : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         score = 0;
         questionBoard = GameObject.Find("TriviaCanvas");
+
+        questionBoard.GetComponent<QuestionManager>().Reset();
     }
 
     // Update is called once per frame
@@ -54,6 +56,7 @@ public class playerControll : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         isGrounded = true;
+        
 
         if (collision.gameObject.tag=="obstacle")
         {
