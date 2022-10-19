@@ -50,7 +50,9 @@ UnityEngine.Camera::ScreenToViewportPoint_Injected
 UnityEngine.Camera::ViewportToWorldPoint_Injected
 UnityEngine.Camera::WorldToScreenPoint_Injected
 UnityEngine.Camera::get_pixelRect_Injected
+UnityEngine.Camera::get_rect_Injected
 UnityEngine.Camera::set_orthographicSize
+UnityEngine.Camera::set_rect_Injected
 UnityEngine.Camera::get_current
 UnityEngine.Camera::get_main
 UnityEngine.Camera::get_clearFlags

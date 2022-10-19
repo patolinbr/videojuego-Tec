@@ -9,28 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9da35ba1-d2cf-4b06-873b-ea3601d69512" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../game/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/LastSceneManagerSetup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/ProtocolInstance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/SceneVisibilityState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/Library/com.unity.ide.rider/PersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Library/com.unity.ide.rider/PersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/../game/Temp/__Backupscenes/0.backup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../game/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Login.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Areas/Identity/Pages/Account/Register.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/server/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Course/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Course/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Course/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/Course/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/CourseSection/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/CourseSection/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Home/Home.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Home/Index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/Home/Privacy.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/QuestionScore/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/QuestionScore/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/QuestionScore/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/QuestionScore/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Views/QuestionScore/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Views/QuestionScore/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +105,7 @@
       <workItem from="1665773973470" duration="615000" />
       <workItem from="1665791286550" duration="3472000" />
       <workItem from="1665967951765" duration="9173000" />
-      <workItem from="1666039290191" duration="23415000" />
+      <workItem from="1666039290191" duration="24091000" />
     </task>
     <servers />
   </component>

@@ -2,12 +2,13 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AudioManafer
+    - CameraScaler
     - Destructor
     - DestructorObstaculos
     - GameManager
     - MainMenu
     - Parallax2
-    - PauseMenu
+    - ParallaxManager
     - Question
     - Spawner
     - animationState
@@ -23,14 +24,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -96,16 +89,13 @@ ScriptsOnlyBuild:
     methodName: PlayGame
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
+    methodName: PlayGame
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
     methodName: SetVolume
   - assembly: Assembly-CSharp
-    fullTypeName: PauseMenu
-    methodName: loadMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenu
-    methodName: Resume
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenu
-    methodName: quitGame
+    fullTypeName: MainMenu
+    methodName: PlayGame
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
     methodName: PlayGame
@@ -145,8 +135,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -158,47 +146,45 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1546}
-    - Class: 114
       Script: {instanceID: 1586}
-    - Class: 114
-      Script: {instanceID: 1792}
     - Class: 114
       Script: {instanceID: 1942}
     - Class: 114
       Script: {instanceID: 2154}
     - Class: 114
-      Script: {instanceID: 2286}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 2674}
+      Script: {instanceID: 2756}
     - Class: 114
-      Script: {instanceID: 2754}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 2904}
+      Script: {instanceID: 3214}
     - Class: 114
-      Script: {instanceID: 3212}
+      Script: {instanceID: 3876}
     - Class: 114
-      Script: {instanceID: 3874}
+      Script: {instanceID: 3998}
     - Class: 114
-      Script: {instanceID: 5136}
+      Script: {instanceID: 5140}
     - Class: 114
-      Script: {instanceID: 5374}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 5494}
+      Script: {instanceID: 5498}
     - Class: 114
-      Script: {instanceID: 5660}
+      Script: {instanceID: 5664}
     - Class: 114
-      Script: {instanceID: 6000}
+      Script: {instanceID: 6004}
     - Class: 114
-      Script: {instanceID: 6158}
+      Script: {instanceID: 6162}
     - Class: 114
-      Script: {instanceID: 6516}
+      Script: {instanceID: 6520}
     - Class: 114
-      Script: {instanceID: 6878}
+      Script: {instanceID: 6882}
     - Class: 114
-      Script: {instanceID: 7196}
+      Script: {instanceID: 7200}
     - Class: 114
-      Script: {instanceID: 45084}
+      Script: {instanceID: 7406}
+    - Class: 114
+      Script: {instanceID: 8244}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -248,8 +234,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -263,31 +247,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2226}
     - Class: 114
-      Script: {instanceID: 2674}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 2754}
+      Script: {instanceID: 2756}
     - Class: 114
-      Script: {instanceID: 2904}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 3212}
+      Script: {instanceID: 3214}
     - Class: 114
-      Script: {instanceID: 4190}
+      Script: {instanceID: 3998}
     - Class: 114
-      Script: {instanceID: 4302}
+      Script: {instanceID: 4194}
     - Class: 114
-      Script: {instanceID: 4578}
+      Script: {instanceID: 4306}
     - Class: 114
-      Script: {instanceID: 5136}
+      Script: {instanceID: 4582}
     - Class: 114
-      Script: {instanceID: 5282}
+      Script: {instanceID: 5140}
     - Class: 114
-      Script: {instanceID: 5374}
+      Script: {instanceID: 5286}
     - Class: 114
-      Script: {instanceID: 6000}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 6158}
+      Script: {instanceID: 6004}
     - Class: 114
-      Script: {instanceID: 6516}
+      Script: {instanceID: 6162}
+    - Class: 114
+      Script: {instanceID: 6520}
+    - Class: 114
+      Script: {instanceID: 7406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -339,8 +327,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -354,25 +340,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2154}
     - Class: 114
-      Script: {instanceID: 2674}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 2754}
+      Script: {instanceID: 2756}
     - Class: 114
-      Script: {instanceID: 2904}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 3212}
+      Script: {instanceID: 3214}
     - Class: 114
-      Script: {instanceID: 5136}
+      Script: {instanceID: 3998}
     - Class: 114
-      Script: {instanceID: 5374}
+      Script: {instanceID: 5140}
     - Class: 114
-      Script: {instanceID: 6000}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 6158}
+      Script: {instanceID: 6004}
     - Class: 114
-      Script: {instanceID: 6516}
+      Script: {instanceID: 6162}
     - Class: 114
-      Script: {instanceID: 6752}
+      Script: {instanceID: 6520}
+    - Class: 114
+      Script: {instanceID: 6756}
+    - Class: 114
+      Script: {instanceID: 7406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -472,7 +462,7 @@ ScriptsOnlyBuild:
     className: DestructorObstaculos
   - hash:
       serializedVersion: 2
-      Hash: 5f43fcf914a4b7da1ae131b47544a9c3
+      Hash: 754a9f336dfb8dfb606404a04dd203b8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Parallax2
@@ -524,6 +514,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 3e9f6eb013e1f31499a57c0b153d8382
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Answer
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -806,6 +802,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: e15f8da36b0cc0c6b2190028337cde45
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ParallaxManager
   - hash:
       serializedVersion: 2
       Hash: 8b1fe5dfdcf943fb3b72506b9f19335f
@@ -1336,6 +1338,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraScaler
+  - hash:
+      serializedVersion: 2
       Hash: a1ca1237bad0f30ea5ba8f4060929114
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -1432,6 +1440,12 @@ ScriptsOnlyBuild:
     className: VertexZoom
   - hash:
       serializedVersion: 2
+      Hash: 4be381e1b75002b9289527b5f1d7a44d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Question
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1466,18 +1480,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 4be381e1b75002b9289527b5f1d7a44d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Question
-  - hash:
-      serializedVersion: 2
-      Hash: 3e9f6eb013e1f31499a57c0b153d8382
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Answer
   platform: 20
   scenePathNames:
   - Assets/menu.unity

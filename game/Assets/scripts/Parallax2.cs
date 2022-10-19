@@ -7,7 +7,7 @@ public class Parallax2 : MonoBehaviour
 
     public Vector2 velocidadMov;
 
-    public Vector2 offset;
+    // public Vector2 offset;
 
     private Material material;
 
@@ -21,7 +21,7 @@ public class Parallax2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        offset = velocidadMov * Time.deltaTime;
-        material.mainTextureOffset += offset;
+        // offset = velocidadMov * Time.deltaTime;
+        material.mainTextureOffset += velocidadMov * Time.deltaTime;
     }
 }
